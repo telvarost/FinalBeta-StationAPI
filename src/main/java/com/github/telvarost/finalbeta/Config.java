@@ -13,6 +13,9 @@ public class Config {
         @ConfigName("Sugarcane Fixes Enabled")
         public static Boolean sugarCaneFixesEnabled = true;
 
+        @ConfigName("FIX_BOW_MODEL")
+        public static Boolean FIX_BOW_MODEL = true;
+
 //        public static final Option<Boolean> SUGAR_CANE_ON_SAND = make("Sugar Cane on sand", true, "Allows sugar canes to be placed on sand");
 //        public static final Option<Boolean> ADD_MORE_SOUNDS = make("Add more sounds", true,
 //                "Links a few more sounds from your local 'resources' folder with the game, namely for item breaking, minecarts and chests");

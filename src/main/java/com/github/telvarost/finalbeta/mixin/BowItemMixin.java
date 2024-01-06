@@ -1,21 +1,21 @@
-package xyz.pixelatedw.finalbeta.mixin;
+package com.github.telvarost.finalbeta.mixin;
 
+import com.github.telvarost.finalbeta.Config;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.minecraft.item.ItemType;
-import net.minecraft.item.tool.BowItem;
-import xyz.pixelatedw.finalbeta.ModConfig;
+import net.minecraft.item.ItemBase;
+import net.minecraft.item.tool.Bow;
 
-@Mixin(BowItem.class)
+@Mixin(Bow.class)
 public class BowItemMixin {
 	@Inject(method = "<init>(I)V", at = @At("TAIL"))
 	public void init(int i, CallbackInfo ci) {
-		if(ModConfig.FIX_BOW_MODEL.get()) {
-			ItemType item = ((ItemType) (Object) this);
-			item.method_466();			
+		if(Config.ConfigFields.FIX_BOW_MODEL) {
+			ItemBase item = ((ItemBase) (Object) this);
+			item.setRendered3d();
 		}
 	}
 }

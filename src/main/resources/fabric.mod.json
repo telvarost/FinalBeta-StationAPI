@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "finalbeta",
+  "version": "${version}",
+
+  "name": "FinalBeta",
+  "description": "Adds some quality of life changes and fixes some graphical issues.",
+  "authors": [
+    "Telvarost",
+    "2zqa"
+  ],
+  "contact": {
+    "issues": "https://github.com/telvarost/FinalBeta-StationAPI/issues",
+    "homepage": "https://github.com/telvarost/FinalBeta-StationAPI/",
+    "sources": "https://github.com/telvarost/FinalBeta-StationAPI/"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/finalbeta/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+      "com.github.telvarost.finalbeta.events.init.RecipeListener",
+      "com.github.telvarost.finalbeta.events.ItemUsedInCraftingListener"
+    ],
+    "stationapi:event_bus_client": [
+    ],
+    "stationapi:event_bus_server": [
+    ],
+    "gcapi": [
+      "com.github.telvarost.finalbeta.Config"
+    ]
+  },
+  "mixins": [
+    "finalbeta.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}

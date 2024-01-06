@@ -221,7 +221,7 @@ After:
 <br>
 As well as a bunch of other minor issues not worth having before/after images such as grass block items being rendered incorrectly or the useless 10mb array wasting resources.
 
-## Install
+## Install (Under construction, install instruction not valid yet)
 
 ### Vanilla Launcher
 - Download the Vanilla Launcher installer of Cursed Legacy Fabric from [https://minecraft-cursed-legacy.github.io/downloads.html](https://minecraft-cursed-legacy.github.io/downloads.html)

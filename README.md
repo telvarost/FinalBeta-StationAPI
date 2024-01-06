@@ -12,9 +12,70 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 **There's a very high chance this mod will not work in multiplayer, as of right now it is purely for singleplayer**
 
+## List of tweaks from original mod
+
+The following features were not ported since the fix already exists in AnnoyanceFix mod
+
+<details><summary>Updated list of blocks that pickaxes and axes can mine quicker</summary>
+
+**Extra pickaxe blocks:**
+- Cobblestone stairs
+- Redstone ore
+- Iron door
+- Bricks
+- Furnaces
+- Dispensers
+- Stone pressure plates
+- Rails
+- Detector rails
+- Powered rails
+- Pistons
+- Sticky pistons
+
+**Extra axe blocks:**
+- Wooden stairs
+- Door
+- Pressure plates
+- Jukebox
+- Note blocks
+- Pumpkins
+- Signs
+- Trapdoors
+- Ladders
+- Crafting tables
+- Fences
+
+</details>
+
+<details><summary>Stairs will now drop themselves rather than cobble/planks</summary>
+
+Before:<br>
+<video controls src="https://i.imgur.com/QSq8E8m.mp4" />
+
+After:<br>
+<video controls src="https://i.imgur.com/l5arDtA.mp4" />
+
+</details>
+
+<details><summary>Fixes saddled pigs not dropping their saddles on death</summary>
+
+Before:
+<video controls src="https://i.imgur.com/PVLRNn5.mp4"/>
+
+After:
+<video controls src="https://i.imgur.com/0yHHfxB.mp4" />
+
+</details>
+
 ## List of changes
 
 ### Quality of Life changes
+
+<details><summary>Sugar canes can now be places on sand (planned to be removed since change is already in AnnoyanceFix)</summary>
+
+![sugar cane on sand](https://i.imgur.com/N7WjSx8.png)
+
+</details>
 
 <details><summary>More sounds</summary>
 

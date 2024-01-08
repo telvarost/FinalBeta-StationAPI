@@ -14,7 +14,11 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 ## List of tweaks from original mod
 
-The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod.
+The following features were added to the FinalBeta mod but were not a part of the original:
+
+Allowing pressure plates to be place-able on fences.
+
+The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 
 <details><summary>Updated list of blocks that pickaxes and axes can mine quicker</summary>
 

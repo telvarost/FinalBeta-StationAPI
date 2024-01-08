@@ -6,6 +6,7 @@
   "mixins": [
     "DeathScreenMixin",
     "SugarCaneMixin",
+    "PressurePlateMixin",
     "BowItemMixin",
     "PlayerRendererMixin",
     "ContainerScreenMixin",

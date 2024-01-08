@@ -13,6 +13,9 @@ public class Config {
         @ConfigName("Allow sugarcane to be placed on sand")
         public static Boolean sugarCaneFixesEnabled = true;
 
+        @ConfigName("Allow pressure plates to be placed on fences")
+        public static Boolean pressurePlateFixesEnabled = true;
+
         @ConfigName("Fix bow models")
         public static Boolean FIX_BOW_MODEL = true;
 

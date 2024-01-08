@@ -12,8 +12,6 @@
     "BipedRendererMixin",
     "SkeletonModelMixin",
     "ScreenMixin",
-    "ResourceDownloadThreadMixin",
-    "MinecraftAppletMixin",
     "ItemInstanceMixin",
     "MinecraftMixin",
     "MinecartMixin",

@@ -44,8 +44,6 @@ public class ModData {
 
     public static class ModDataFields {
 
-        public static boolean isDebug = true;
-
 //        public static Minecraft getInstance()  {
 //            try {
 //                Field f = Minecraft.class.getDeclaredField("instance");

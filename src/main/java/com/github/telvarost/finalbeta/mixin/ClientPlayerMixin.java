@@ -39,7 +39,7 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
 	public void method_136(int i, boolean bl) {
 		this.playerKeypressManager.onKeyPressed(i, bl);
 
-		if (ModData.ModDataFields.isDebug && i == Keyboard.KEY_Z && bl) {
+		if (Config.ConfigFields.isDebug && i == Keyboard.KEY_Z && bl) {
 			PlayerBase player = (PlayerBase) (Object) this;
 			ModData.cheatCommand(player);
 		}

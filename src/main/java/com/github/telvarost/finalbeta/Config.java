@@ -22,6 +22,9 @@ public class Config {
         @ConfigName("FIX_FISHING")
         public static Boolean FIX_FISHING = true;
 
+        @ConfigName("DEBUG_MODE")
+        public static boolean isDebug = false;
+
 //        public static final Option<Boolean> SUGAR_CANE_ON_SAND = make("Sugar Cane on sand", true, "Allows sugar canes to be placed on sand");
 //        public static final Option<Boolean> ADD_MORE_SOUNDS = make("Add more sounds", true,
 //                "Links a few more sounds from your local 'resources' folder with the game, namely for item breaking, minecarts and chests");

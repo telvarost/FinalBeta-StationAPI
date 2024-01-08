@@ -17,12 +17,12 @@ import net.minecraft.client.Minecraft;
 @Mixin(Minecraft.class)
 public class MinecraftMixin {
 
-	@Redirect(method = "init()V", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/Display;create()V"))
-	public void finalBeta_createDisplay() throws LWJGLException {
-		// Why the fuck is this even a thing ? What was its intended purpose ? I NEED TO KNOW
-		Minecraft.field_2800 = null;
-		Display.create(new PixelFormat(0, 24, 0));
-	}
+//	@Redirect(method = "init()V", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/Display;create()V"))
+//	public void finalBeta_createDisplay() throws LWJGLException {
+//		// Why the fuck is this even a thing ? What was its intended purpose ? I NEED TO KNOW
+//		Minecraft.field_2800 = null;
+//		Display.create(new PixelFormat(0, 24, 0));
+//	}
 
 	@Inject(method = "loadSoundFromDir", at = @At("HEAD"))
 	public void finalBeta_loadSoundFromDir(String string, File file, CallbackInfo ci) {

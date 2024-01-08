@@ -13,7 +13,7 @@ public class ResourceDownloadThreadMixin {
 	private static final String RESOURCES_URL = "http://mcresources.modification-station.net/MinecraftResources/";
 	
 	@ModifyConstant(method = "run", constant = @Constant(stringValue = "http://s3.amazonaws.com/MinecraftResources/"), remap = false)
-	private String getResourcesUrl(String def) {
+	private String finalBeta_getResourcesUrl(String def) {
 		return RESOURCES_URL;
 	}
 }

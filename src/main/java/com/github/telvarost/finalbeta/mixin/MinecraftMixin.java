@@ -18,14 +18,14 @@ import net.minecraft.client.Minecraft;
 public class MinecraftMixin {
 
 	@Redirect(method = "init()V", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/Display;create()V"))
-	public void createDisplay() throws LWJGLException {
+	public void finalBeta_createDisplay() throws LWJGLException {
 		// Why the fuck is this even a thing ? What was its intended purpose ? I NEED TO KNOW
 		Minecraft.field_2800 = null;
 		Display.create(new PixelFormat(0, 24, 0));
 	}
 
 	@Inject(method = "loadSoundFromDir", at = @At("HEAD"))
-	public void loadSoundFromDir(String string, File file, CallbackInfo ci) {
+	public void finalBeta_loadSoundFromDir(String string, File file, CallbackInfo ci) {
 		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
 			Minecraft mc = (Minecraft) (Object) this;
 			int split = string.indexOf("/");

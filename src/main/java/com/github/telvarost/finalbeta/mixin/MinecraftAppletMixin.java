@@ -10,7 +10,8 @@ import net.minecraft.client.MinecraftApplet;
 
 @Mixin(MinecraftApplet.class)
 public class MinecraftAppletMixin {
+
     @Redirect(method = "init", at = @At(value = "FIELD", opcode = Opcodes.PUTFIELD, target = "Lnet/minecraft/client/Minecraft;isApplet:Z"))
-    private void disableIsApplet(Minecraft minecraft, boolean value) {
+    private void finalBeta_disableIsApplet(Minecraft minecraft, boolean value) {
     }
 }

@@ -9,8 +9,9 @@ import net.minecraft.client.gui.screen.ingame.Death;
 
 @Mixin(Death.class)
 public class DeathScreenMixin {
+
 	@ModifyConstant(method = "render", constant = @Constant(stringValue = "Score: &e"))
-	private String getResourcesUrl(String def) {
+	private String finalBeta_getResourcesUrl(String def) {
 		return def.replace('&', '\u00a7'); // Replacing & with § so the color actually displays as yellow
 	}
 }

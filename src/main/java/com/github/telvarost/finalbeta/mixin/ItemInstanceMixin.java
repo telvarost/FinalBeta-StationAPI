@@ -20,7 +20,7 @@ public class ItemInstanceMixin {
 	private int damage;
 
 	@Inject(method = "applyDamage", at = @At("HEAD"))
-	public void applyDamage(int i, EntityBase arg, CallbackInfo ci) {
+	public void finalBeta_applyDamage(int i, EntityBase arg, CallbackInfo ci) {
 		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
 			ItemInstance item = (ItemInstance) (Object) this;
 			if (this.damage + i > item.getDurability()) {

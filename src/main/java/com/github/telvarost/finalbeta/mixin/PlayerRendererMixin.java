@@ -26,7 +26,7 @@ public class PlayerRendererMixin extends LivingEntityRendererMixin {
 	private Biped field_296; // Legs
 
 	@Inject(method = "method_342", at = @At(value = "INVOKE", target = "Lnet/minecraft/class_556;method_1862(Lnet/minecraft/entity/Living;Lnet/minecraft/item/ItemInstance;)V", shift = Shift.BEFORE))
-	public void playerRendering(PlayerBase player, float f, CallbackInfo ci) {
+	public void finalBeta_playerRendering(PlayerBase player, float f, CallbackInfo ci) {
 		if (Config.ConfigFields.FIX_BOW_MODEL) {
 			ItemInstance item = player.inventory.getHeldItem();
 			if (item != null && item.itemId == ItemBase.bow.id) {
@@ -36,7 +36,7 @@ public class PlayerRendererMixin extends LivingEntityRendererMixin {
 	}
 
 	@Inject(method = "method_341", at = @At("HEAD"))
-	public void render(PlayerBase arg, double d, double d1, double d2, float f, float f1, CallbackInfo ci) {
+	public void finalBeta_render(PlayerBase arg, double d, double d1, double d2, float f, float f1, CallbackInfo ci) {
 		if (Config.ConfigFields.FIX_LEG_ARMOR_ON_VEHICLES) {
 			ItemInstance stack = arg.inventory.getArmourItem(1);
 			if (stack != null) {

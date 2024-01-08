@@ -13,7 +13,7 @@ import net.minecraft.entity.Item;
 public class FishHookMixin {
 
 	@ModifyArgs(method = "method_956", at = @At(value = "INVOKE", target = "Lnet/minecraft/level/Level;spawnEntity(Lnet/minecraft/entity/EntityBase;)Z"))
-	private void onFishCaught(Args args) {
+	private void finalBeta_onFishCaught(Args args) {
 		if(Config.ConfigFields.FIX_FISHING) {
 			Item item = args.get(0);
 			FishHook hook = (FishHook) (Object) this;

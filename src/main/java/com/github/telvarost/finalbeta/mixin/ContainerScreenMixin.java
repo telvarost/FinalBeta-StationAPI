@@ -27,7 +27,7 @@ public class ContainerScreenMixin extends ScreenBase {
 	private static ItemRenderer itemRenderer = new ItemRenderer();
 
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/container/ContainerBase;renderForeground()V", shift = Shift.AFTER))
-	public void onRender(int i, int j, float f, CallbackInfo ci) {
+	public void finalBeta_onRender(int i, int j, float f, CallbackInfo ci) {
 		ContainerBase screen = ((ContainerBase) (Object) this);
 		PlayerInventory selectedItem = this.minecraft.player.inventory;
 		int posX = (screen.width - this.containerWidth) / 2;

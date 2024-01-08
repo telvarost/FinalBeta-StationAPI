@@ -39,7 +39,7 @@ public class OverlayMixin extends DrawableHelper {
 			)
 		)
 	)
-	public void render(float f, boolean flag, int i, int j, CallbackInfo ci) {
+	public void finalBeta_render(float f, boolean flag, int i, int j, CallbackInfo ci) {
 		TextRenderer textRenderer = this.minecraft.textRenderer;
 		this.drawTextWithShadow(textRenderer, "Days Played: " + ModHelper.getGameDaysPlayed() + " (" + ModHelper.getRealDaysPlayed() + ")", 2, 96, 14737632);
 	}

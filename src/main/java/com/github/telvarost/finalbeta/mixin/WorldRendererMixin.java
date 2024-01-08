@@ -13,7 +13,7 @@ import net.minecraft.client.render.WorldRenderer;
 public class WorldRendererMixin {
 
 	@Inject(method = "method_1552", at = @At("HEAD"), cancellable = true)
-	public void cloudRenderer(float f, CallbackInfo ci) {
+	public void finalBeta_cloudRenderer(float f, CallbackInfo ci) {
 		if(!ModHelper.ModHelperFields.ENABLE_CLOUDS) {
 			ci.cancel();
 		}

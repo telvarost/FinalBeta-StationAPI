@@ -23,7 +23,7 @@ public class MinecartMixin {
 	private static final double EXTRA_MINECART_Y_SIZE = 0.0;
 
 	@Inject(method = "getBoundingBox", at = @At("HEAD"), cancellable = true)
-	public void onCollision(EntityBase other, CallbackInfoReturnable<Box> ci) {
+	public void finalBeta_onCollision(EntityBase other, CallbackInfoReturnable<Box> ci) {
 		if (Config.ConfigFields.FIX_MINECART_STOPPING_ON_ITEMS) {
 			if (other instanceof Item || other instanceof Arrow) {
 				ci.setReturnValue(null);
@@ -32,7 +32,7 @@ public class MinecartMixin {
 	}
 
 	@Inject(method = "tick", at = @At("TAIL"))
-	public void tick(CallbackInfo ci) {
+	public void finalBeta_tick(CallbackInfo ci) {
 		Minecart minecart = (Minecart) (Object) this;
 		int x = MathHelper.floor(minecart.x);
 		int y = MathHelper.floor(minecart.y);

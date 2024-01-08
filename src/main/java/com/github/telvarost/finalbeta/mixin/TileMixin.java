@@ -12,7 +12,7 @@ import net.minecraft.block.BlockBase;
 public class TileMixin {
 
 	@Inject(method = "getTextureForSide(I)I", at = @At("HEAD"), cancellable = true)
-	public void getTextureForSide(int i, CallbackInfoReturnable<Integer> ci) {
+	public void finalBeta_getTextureForSide(int i, CallbackInfoReturnable<Integer> ci) {
 		BlockBase tile = (BlockBase) (Object) this;
 		if (tile.id == BlockBase.GRASS.id) {
 			if (i == 1) {

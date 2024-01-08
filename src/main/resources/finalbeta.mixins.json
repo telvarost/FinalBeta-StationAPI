@@ -5,7 +5,6 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "DeathScreenMixin",
-    "ClientPlayerMixin",
     "SugarCaneMixin",
     "BowItemMixin",
     "PlayerRendererMixin",
@@ -20,7 +19,6 @@
     "MinecartMixin",
     "LivingEntityRendererMixin",
     "FishHookMixin",
-    "TileRendererMixin",
     "FurnaceEntityMixin",
     "WorldRendererMixin",
     "VideoSettingsScreenMixin",

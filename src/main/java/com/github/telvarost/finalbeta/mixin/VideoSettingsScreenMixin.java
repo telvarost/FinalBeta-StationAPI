@@ -15,13 +15,13 @@ import net.minecraft.client.resource.language.TranslationStorage;
 public class VideoSettingsScreenMixin extends ScreenMixin {
 
 	@Inject(method = "init", at = @At("TAIL"))
-	public void init(CallbackInfo ci) {
+	public void finalBeta_init(CallbackInfo ci) {
 		VideoSettings screen = (VideoSettings)(Object)this;
-		this.buttons.add(new Button(300, screen.width / 2 - 155, screen.height / 6 + 96, 150, 20, this.getCloudsLabel()));
+		this.buttons.add(new Button(300, screen.width / 2 - 155, screen.height / 6 + 96, 150, 20, this.finalBeta_getCloudsLabel()));
 	}
 
 	@Inject(method = "buttonClicked", at = @At("HEAD"))
-	public void buttonClicked(Button btn, CallbackInfo ci) {
+	public void finalBeta_buttonClicked(Button btn, CallbackInfo ci) {
 		if(btn.active) {
 			if(btn.id == 300) {
 				ModHelper.ModHelperFields.ENABLE_CLOUDS = !ModHelper.ModHelperFields.ENABLE_CLOUDS;
@@ -29,7 +29,7 @@ public class VideoSettingsScreenMixin extends ScreenMixin {
 		}
 	}
 
-	private String getCloudsLabel() {
+	private String finalBeta_getCloudsLabel() {
 		TranslationStorage i18n = TranslationStorage.getInstance();
 		return "Clouds: " + (ModHelper.ModHelperFields.ENABLE_CLOUDS ? i18n.translate("options.on") : i18n.translate("options.off"));
 	}

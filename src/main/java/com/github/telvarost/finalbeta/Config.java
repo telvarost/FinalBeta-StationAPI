@@ -22,6 +22,12 @@ public class Config {
         @ConfigName("FIX_FISHING")
         public static Boolean FIX_FISHING = true;
 
+        @ConfigName("FIX_FURNACE_LAVA_BUCKET")
+        public static Boolean FIX_FURNACE_LAVA_BUCKET = true;
+
+        @ConfigName("DISABLE_ID_TAGS")
+        public static Boolean DISABLE_ID_TAGS = true;
+
         @ConfigName("DEBUG_MODE")
         public static boolean isDebug = false;
 

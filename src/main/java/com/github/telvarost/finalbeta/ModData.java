@@ -1,5 +1,6 @@
 package com.github.telvarost.finalbeta;
 
+import net.glasslauncher.mods.api.gcapi.api.ConfigName;
 import net.minecraft.block.BlockBase;
 import net.minecraft.entity.Living;
 import net.minecraft.entity.player.PlayerBase;
@@ -76,7 +77,8 @@ public class ModData {
 
     public static class ModDataFields {
 
-
+        @ConfigName("ENABLE_CLOUDS")
+        public static Boolean ENABLE_CLOUDS = true;
 //
 //        public static boolean isTimeBehind() {
 //            // int currentPlayTime = WyHelper.getInstance().statManager.getStatAmount(Stats.playOneMinute)

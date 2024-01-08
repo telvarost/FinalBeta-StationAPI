@@ -14,7 +14,7 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 ## List of tweaks from original mod
 
-The following features were not ported since the fix already exists in AnnoyanceFix mod
+The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod.
 
 <details><summary>Updated list of blocks that pickaxes and axes can mine quicker</summary>
 
@@ -67,6 +67,26 @@ After:
 
 </details>
 
+<details><summary>Chest sounds</summary>
+
+- Opening / closing chests
+
+**Note: The mod doesn't add any sounds by itself, all of these sounds are already present in your "resources" folder, they are automatically downloaded by Minecraft itself**
+
+</details>
+
+<details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
+
+Before:
+![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
+
+After:
+![torches with a bottom texture](https://i.imgur.com/pBmy6UX.png)
+
+</details>
+
+Fixing the grass block inventory item having the incorrect top texture
+
 ## List of changes
 
 ### Quality of Life changes
@@ -79,7 +99,6 @@ After:
 
 <details><summary>More sounds</summary>
 
-- Opening / closing chests
 - Minecarts
 - Items breaking
 
@@ -199,16 +218,6 @@ After:<br>
 
 </details>
 
-<details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
-
-Before:
-![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
-
-After:
-![torches with a bottom texture](https://i.imgur.com/pBmy6UX.png)
-
-</details>
-
 <details><summary>Fixes furnaces consuming the buckets as well when using lava buckets</summary>
 
 Before:<br>
@@ -219,25 +228,8 @@ After:
 
 </details>
 <br>
-As well as a bunch of other minor issues not worth having before/after images such as grass block items being rendered incorrectly or the useless 10mb array wasting resources.
 
-## Install (Under construction, install instruction not valid yet)
-
-### Vanilla Launcher
-- Download the Vanilla Launcher installer of Cursed Legacy Fabric from [https://minecraft-cursed-legacy.github.io/downloads.html](https://minecraft-cursed-legacy.github.io/downloads.html)
-- Run the installer and let it finish
-- Download the latest version of the mod
-- Navigate your .minecraft > b1.7.3 > mods folder and drop the mod .jar file there
-- Start the launcher and make sure you pick the Cursed Fabric profile before starting the game
-
-### MultiMC / Prism Launcher
-- Download the MultiMC archive of Cursed Legacy Fabric from [https://minecraft-cursed-legacy.github.io/downloads.html](https://minecraft-cursed-legacy.github.io/downloads.html)
-- Open your MultiMC / Prism Launcher
-- Drag the .zip file into the launcher (you can also choose a different name for this profile now) and click Ok
-- Download the latest version of the mod
-- Navigate to the newly created instance's location (easier way to do this is from your launcher right click on the profile and select Folder)
-- Go in the .minecraft > mods folder and drop the mod .jar file there
-- Go back to your launcher and start the Cursed Fabric profile you've just installed
+As well as a few of other minor issues such as the useless 10mb array wasting resources.
 
 ## Installation using Prism Launcher
 

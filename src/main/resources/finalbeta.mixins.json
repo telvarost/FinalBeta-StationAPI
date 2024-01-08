@@ -4,7 +4,25 @@
   "package": "com.github.telvarost.finalbeta.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "SugarCaneMixin"
+    "DeathScreenMixin",
+    "SugarCaneMixin",
+    "BowItemMixin",
+    "PlayerRendererMixin",
+    "ContainerScreenMixin",
+    "BipedRendererMixin",
+    "SkeletonModelMixin",
+    "ScreenMixin",
+    "ResourceDownloadThreadMixin",
+    "MinecraftAppletMixin",
+    "ItemInstanceMixin",
+    "MinecraftMixin",
+    "MinecartMixin",
+    "LivingEntityRendererMixin",
+    "FishHookMixin",
+    "FurnaceEntityMixin",
+    "WorldRendererMixin",
+    "VideoSettingsScreenMixin",
+    "OverlayMixin"
   ],
   "server": [
   ],

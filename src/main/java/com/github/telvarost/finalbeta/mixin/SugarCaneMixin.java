@@ -1,6 +1,5 @@
 package com.github.telvarost.finalbeta.mixin;
 
-
 import com.github.telvarost.finalbeta.Config;
 import net.minecraft.block.BlockBase;
 import net.minecraft.block.SugarCane;

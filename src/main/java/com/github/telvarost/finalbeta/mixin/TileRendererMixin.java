@@ -1,5 +1,6 @@
-package xyz.pixelatedw.finalbeta.mixin;
+package com.github.telvarost.finalbeta.mixin;
 
+import com.github.telvarost.finalbeta.Config;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -7,59 +8,59 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.minecraft.client.colour.GrassColour;
+import net.minecraft.client.render.block.GrassColour;
 import net.minecraft.client.render.Tessellator;
-import net.minecraft.client.render.TileRenderer;
-import net.minecraft.tile.Tile;
+import net.minecraft.client.render.block.BlockRenderer;
+import net.minecraft.block.BlockBase;
 
-@Mixin(TileRenderer.class)
+@Mixin(BlockRenderer.class)
 public class TileRendererMixin {
 
 	@Shadow
-	private int field_83;
+	private int textureOverride;
 
 	// Grass block texture using side textures for top fix
 	@Inject(method = "method_48", at = @At("HEAD"), cancellable = true)
-	public void grassBlockRenderer(Tile arg, int i, float f, CallbackInfo ci) {
+	public void grassBlockRenderer(BlockBase arg, int i, float f, CallbackInfo ci) {
 		// Normal Blocks are rendered using this the 0 type, we're using this
 		// just as a safenet in case the tile is not grass
-		int type = arg.method_1621();
-		if (arg.id == Tile.GRASS.id && type == 0) {
+		int type = arg.getRenderType();
+		if (arg.id == BlockBase.GRASS.id && type == 0) {
 			Tessellator tess = Tessellator.INSTANCE;
-			TileRenderer renderer = (TileRenderer) (Object) this;
+			BlockRenderer renderer = (BlockRenderer) (Object) this;
 
 			arg.method_1605();
 			GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
 			tess.start();
-			tess.method_1697(0.0F, -1.0F, 0.0F);
-			renderer.method_46(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(0, i));
+			tess.setNormal(0.0F, -1.0F, 0.0F);
+			renderer.renderBottomFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(0, i));
 			tess.draw();
 
 			// This bit controls the top texture specifically
-			float r = (GrassColour.getColour(0.96, 0.44) >> 16 & 255) / 255.0F;
-			float g = (GrassColour.getColour(0.96, 0.44) >> 8 & 255) / 255.0F;
-			float b = (GrassColour.getColour(0.96, 0.44) & 255) / 255.0F;
+			float r = (GrassColour.get(0.96, 0.44) >> 16 & 255) / 255.0F;
+			float g = (GrassColour.get(0.96, 0.44) >> 8 & 255) / 255.0F;
+			float b = (GrassColour.get(0.96, 0.44) & 255) / 255.0F;
 			tess.start();
-			tess.method_1697(0.0F, 1.0F, 0.0F);
+			tess.setNormal(0.0F, 1.0F, 0.0F);
 			tess.colour(r * f, g * f, b * f);
-			renderer.method_55(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(1, i));
+			renderer.renderTopFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(1, i));
 			tess.draw();
 
 			tess.start();
-			tess.method_1697(0.0F, 0.0F, -1.0F);
-			renderer.method_61(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(2, i));
+			tess.setNormal(0.0F, 0.0F, -1.0F);
+			renderer.renderEastFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(2, i));
 			tess.draw();
 			tess.start();
-			tess.method_1697(0.0F, 0.0F, 1.0F);
-			renderer.method_65(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(3, i));
+			tess.setNormal(0.0F, 0.0F, 1.0F);
+			renderer.renderWestFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(3, i));
 			tess.draw();
 			tess.start();
-			tess.method_1697(-1.0F, 0.0F, 0.0F);
-			renderer.method_67(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(4, i));
+			tess.setNormal(-1.0F, 0.0F, 0.0F);
+			renderer.renderNorthFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(4, i));
 			tess.draw();
 			tess.start();
-			tess.method_1697(1.0F, 0.0F, 0.0F);
-			renderer.method_69(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(5, i));
+			tess.setNormal(1.0F, 0.0F, 0.0F);
+			renderer.renderSouthFace(arg, 0.0D, 0.0D, 0.0D, arg.getTextureForSide(5, i));
 			tess.draw();
 			GL11.glTranslatef(0.5F, 0.5F, 0.5F);
 			ci.cancel();
@@ -67,12 +68,12 @@ public class TileRendererMixin {
 	}
 
 	// Torch rendering with a bottom texture fix
-	@Inject(method = "method_45", at = @At("HEAD"), cancellable = true)
-	public void torchRenderer(Tile arg, double x, double y, double z, double w, double h, CallbackInfo ci) {
+	@Inject(method = "renderTorchTilted", at = @At("HEAD"), cancellable = true)
+	public void torchRenderer(BlockBase arg, double x, double y, double z, double w, double h, CallbackInfo ci) {
 		Tessellator tess = Tessellator.INSTANCE;
 		int tex = arg.getTextureForSide(0);
-		if (this.field_83 >= 0) {
-			tex = this.field_83;
+		if (this.textureOverride >= 0) {
+			tex = this.textureOverride;
 		}
 
 		int var14 = (tex & 15) << 4;

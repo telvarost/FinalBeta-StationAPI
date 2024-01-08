@@ -28,6 +28,15 @@ public class Config {
         @ConfigName("DISABLE_ID_TAGS")
         public static Boolean DISABLE_ID_TAGS = true;
 
+        @ConfigName("FIX_MINECART_STOPPING_ON_ITEMS")
+        public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
+
+        @ConfigName("FIX_MINECART_FLICKERING")
+        public static Boolean FIX_MINECART_FLICKERING = true;
+
+        @ConfigName("FIX_LEG_ARMOR_ON_VEHICLES")
+        public static Boolean FIX_LEG_ARMOR_ON_VEHICLES = true;
+
         @ConfigName("DEBUG_MODE")
         public static boolean isDebug = false;
 

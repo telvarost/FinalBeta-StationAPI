@@ -5,13 +5,45 @@ import net.minecraft.entity.Living;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.item.ItemBase;
 import net.minecraft.item.ItemInstance;
+import net.minecraft.stat.Stats;
+import net.minecraft.client.Minecraft;
 
+import java.lang.reflect.Field;
+import java.time.Duration;
 import java.util.Random;
 
 public class ModData {
 
-    public static void cheatCommand(PlayerBase player) {
+    public static Minecraft getInstance()  {
+        try {
+            Field f = Minecraft.class.getDeclaredField("instance");
+            f.setAccessible(true);
+            return (Minecraft) f.get(null);
+        } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
+    public static long getRealDaysPlayed() {
+        int seconds = ModData.getInstance().statFileWriter.write(Stats.playOneMinute) / 20;
+        return Duration.ofSeconds(seconds).toDays();
+    }
+
+    public static long getGameDaysPlayed() {
+        int seconds = ModData.getInstance().statFileWriter.write(Stats.playOneMinute) / 20;
+        return Duration.ofSeconds(seconds).toMinutes() / 20;
+    }
+
+    public static float lerp(float delta, float start, float end) {
+        return start + delta * (end - start);
+    }
+
+    public static float clamp(float val, float min, float max) {
+        return val < min ? min : Math.min(val, max);
+    }
+
+    public static void cheatCommand(PlayerBase player) {
         player.dropItem(new ItemInstance(BlockBase.SNOW));
         Random rand = new Random();
         player.level.playSound(player, "random.break", 1, (rand.nextFloat() - rand.nextFloat()) * 0.2F + 1.0F);
@@ -44,16 +76,7 @@ public class ModData {
 
     public static class ModDataFields {
 
-//        public static Minecraft getInstance()  {
-//            try {
-//                Field f = Minecraft.class.getDeclaredField("instance");
-//                f.setAccessible(true);
-//                return (Minecraft) f.get(null);
-//            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
-//                e.printStackTrace();
-//            }
-//            return null;
-//        }
+
 //
 //        public static boolean isTimeBehind() {
 //            // int currentPlayTime = WyHelper.getInstance().statManager.getStatAmount(Stats.playOneMinute)
@@ -62,26 +85,6 @@ public class ModData {
 //
 //        public static long getTicksPlayed() {
 //            return WyHelper.getInstance().statManager.getStatAmount(Stats.playOneMinute);
-//        }
-//
-//        public static long getRealDaysPlayed() {
-//            int seconds = WyHelper.getInstance().statManager.getStatAmount(Stats.playOneMinute) / 20;
-//            return Duration.ofSeconds(seconds).toDays();
-//        }
-//
-//        public static long getGameDaysPlayed() {
-//            int seconds = WyHelper.getInstance().statManager.getStatAmount(Stats.playOneMinute) / 20;
-//            return Duration.ofSeconds(seconds).toMinutes() / 20;
-//        }
-//
-
-//
-//        public static float lerp(float delta, float start, float end) {
-//            return start + delta * (end - start);
-//        }
-//
-//        public static float clamp(float val, float min, float max) {
-//            return val < min ? min : Math.min(val, max);
 //        }
 //
     }

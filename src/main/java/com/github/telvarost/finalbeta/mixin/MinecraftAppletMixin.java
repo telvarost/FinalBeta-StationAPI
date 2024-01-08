@@ -1,4 +1,4 @@
-package xyz.pixelatedw.finalbeta.mixin;
+package com.github.telvarost.finalbeta.mixin;
 
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;

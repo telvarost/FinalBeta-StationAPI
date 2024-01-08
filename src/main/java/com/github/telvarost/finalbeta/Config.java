@@ -19,6 +19,9 @@ public class Config {
         @ConfigName("Add more sounds")
         public static Boolean ADD_MORE_SOUNDS = true;
 
+        @ConfigName("Add day counter to F3 overlay")
+        public static Boolean ADD_DAY_COUNTER = true;
+
         @ConfigName("Fix fishing")
         public static Boolean FIX_FISHING = true;
 

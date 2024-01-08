@@ -1,12 +1,13 @@
-package xyz.pixelatedw.finalbeta.mixin;
+package com.github.telvarost.finalbeta.mixin;
 
+import com.github.telvarost.finalbeta.Config;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-import net.minecraft.client.gui.screen.DeathScreen;
+import net.minecraft.client.gui.screen.ingame.Death;
 
-@Mixin(DeathScreen.class)
+@Mixin(Death.class)
 public class DeathScreenMixin {
 	@ModifyConstant(method = "render", constant = @Constant(stringValue = "Score: &e"))
 	private String getResourcesUrl(String def) {

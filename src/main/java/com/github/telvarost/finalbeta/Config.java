@@ -16,6 +16,12 @@ public class Config {
         @ConfigName("FIX_BOW_MODEL")
         public static Boolean FIX_BOW_MODEL = true;
 
+        @ConfigName("ADD_MORE_SOUNDS")
+        public static Boolean ADD_MORE_SOUNDS = true;
+
+        @ConfigName("FIX_FISHING")
+        public static Boolean FIX_FISHING = true;
+
 //        public static final Option<Boolean> SUGAR_CANE_ON_SAND = make("Sugar Cane on sand", true, "Allows sugar canes to be placed on sand");
 //        public static final Option<Boolean> ADD_MORE_SOUNDS = make("Add more sounds", true,
 //                "Links a few more sounds from your local 'resources' folder with the game, namely for item breaking, minecarts and chests");

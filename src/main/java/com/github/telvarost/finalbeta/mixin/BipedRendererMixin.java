@@ -24,7 +24,7 @@ public class BipedRendererMixin {
 					shift = Shift.BEFORE
 			)
 	)
-	public void playerRendering(Living entity, float f, CallbackInfo ci) {
+	public void finalBeta_playerRendering(Living entity, float f, CallbackInfo ci) {
 		if(Config.ConfigFields.FIX_BOW_MODEL) {
 			ItemInstance item = entity.getMonsterHeldItem(); // this may be wrong .getMonsterHeldItem()
 			if (item != null && item.itemId == ItemBase.bow.id) {

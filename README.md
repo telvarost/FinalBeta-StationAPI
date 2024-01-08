@@ -85,7 +85,9 @@ After:
 
 </details>
 
-Fixing the grass block inventory item having the incorrect top texture
+Fixing the grass block inventory item having the incorrect top texture.
+
+As well as a few of other minor issues such as the useless 10mb array wasting resources. (I think this change was crashing the mod)
 
 ## List of changes
 
@@ -228,8 +230,6 @@ After:
 
 </details>
 <br>
-
-As well as a few of other minor issues such as the useless 10mb array wasting resources.
 
 ## Installation using Prism Launcher
 

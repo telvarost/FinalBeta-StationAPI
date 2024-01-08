@@ -1,7 +1,11 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import com.github.telvarost.finalbeta.ModHelper;
+import net.minecraft.block.Furnace;
+import net.minecraft.inventory.InventoryBase;
 import net.minecraft.item.ItemBase;
+import net.minecraft.tileentity.TileEntityBase;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,18 +17,27 @@ import net.minecraft.item.ItemInstance;
 import net.minecraft.item.ItemBase;
 
 @Mixin(TileEntityFurnace.class)
-public class FurnaceEntityMixin {
+public abstract class FurnaceEntityMixin extends TileEntityBase implements InventoryBase {
 
 	@Shadow
 	private ItemInstance[] inventory;
-	
+
+	@Shadow public int burnTime;
+
 	@Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/tileentity/TileEntityFurnace;getFuelTime(Lnet/minecraft/item/ItemInstance;)I", shift = At.Shift.BY, by = 5), cancellable = true)
-	public void tick(CallbackInfo ci) {
+	public void finalBeta_tickConsumeLavaBucket(CallbackInfo ci) {
 		if(Config.ConfigFields.FIX_FURNACE_LAVA_BUCKET) {
 			if(this.inventory[1] != null && this.inventory[1].itemId == ItemBase.lavaBucket.id) {
-				ci.cancel();
-				this.inventory[1] = new ItemInstance(ItemBase.bucket);
+				ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED = true;
 			}			
+		}
+	}
+
+	@Inject(method = "tick", at = @At(value = "RETURN"))
+	public void finalBeta_tickConsumeLavaBucketReturnEmptyBucket(CallbackInfo ci) {
+		if(ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED) {
+			this.inventory[1] = new ItemInstance(ItemBase.bucket);
+			ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED = false;
 		}
 	}
 }

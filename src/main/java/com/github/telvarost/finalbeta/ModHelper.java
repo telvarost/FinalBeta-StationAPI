@@ -76,7 +76,8 @@ public class ModHelper {
 
     public static class ModHelperFields {
 
-        @ConfigName("ENABLE_CLOUDS")
         public static Boolean ENABLE_CLOUDS = true;
+
+        public static Boolean IS_LAVA_BUCKET_CONSUMED = false;
     }
 }

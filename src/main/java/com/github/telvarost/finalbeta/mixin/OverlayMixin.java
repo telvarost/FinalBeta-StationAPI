@@ -1,7 +1,7 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
-import com.github.telvarost.finalbeta.ModData;
+import com.github.telvarost.finalbeta.ModHelper;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -41,6 +41,6 @@ public class OverlayMixin extends DrawableHelper {
 	)
 	public void render(float f, boolean flag, int i, int j, CallbackInfo ci) {
 		TextRenderer textRenderer = this.minecraft.textRenderer;
-		this.drawTextWithShadow(textRenderer, "Days Played: " + ModData.getGameDaysPlayed() + " (" + ModData.getRealDaysPlayed() + ")", 2, 96, 14737632);
+		this.drawTextWithShadow(textRenderer, "Days Played: " + ModHelper.getGameDaysPlayed() + " (" + ModHelper.getRealDaysPlayed() + ")", 2, 96, 14737632);
 	}
 }

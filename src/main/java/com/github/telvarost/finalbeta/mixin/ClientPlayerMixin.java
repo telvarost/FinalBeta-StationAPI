@@ -1,7 +1,7 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
-import com.github.telvarost.finalbeta.ModData;
+import com.github.telvarost.finalbeta.ModHelper;
 import java.util.Random;
 
 import net.minecraft.client.Minecraft;
@@ -41,7 +41,7 @@ public class ClientPlayerMixin extends AbstractClientPlayer {
 
 		if (Config.ConfigFields.isDebug && i == Keyboard.KEY_Z && bl) {
 			PlayerBase player = (PlayerBase) (Object) this;
-			ModData.cheatCommand(player);
+			ModHelper.cheatCommand(player);
 		}
 	}
 

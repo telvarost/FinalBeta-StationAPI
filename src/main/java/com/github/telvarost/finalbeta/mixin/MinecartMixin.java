@@ -1,7 +1,7 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
-import com.github.telvarost.finalbeta.ModData;
+import com.github.telvarost.finalbeta.ModHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -49,8 +49,8 @@ public class MinecartMixin {
 							minecart.boundingBox.maxY + EXTRA_MINECART_Y_SIZE, minecart.boundingBox.maxZ + EXTRA_MINECART_XZ_SIZE);
 				}
 				++minecart.field_1645;
-				pitch = ModData.clamp(pitch + 0.0025F, 0.0F, 1.0F);
-				volume = ModData.lerp(ModData.clamp(speed, 0.0F, 0.5F), 0.0F, 0.7F);
+				pitch = ModHelper.clamp(pitch + 0.0025F, 0.0F, 1.0F);
+				volume = ModHelper.lerp(ModHelper.clamp(speed, 0.0F, 0.5F), 0.0F, 0.7F);
 			} else {
 				volume = 0.0f;
 				pitch = 0.0f;

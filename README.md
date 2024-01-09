@@ -85,7 +85,7 @@ After:
 
 </details>
 
-Fixing the grass block inventory item having the incorrect top texture.
+Fixing the grass block inventory item having the incorrect top texture, this is fixed in paulevs mod [BHCreative](https://github.com/paulevsGitch/BHCreative) which adds creative mode as a game option to b1.7.3
 
 As well as a few of other minor issues such as the useless 10mb array wasting resources. (I think this change was crashing the mod)
 

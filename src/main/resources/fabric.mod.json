@@ -21,7 +21,6 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "com.github.telvarost.finalbeta.events.init.RecipeListener"
     ],
     "stationapi:event_bus_client": [
     ],

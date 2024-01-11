@@ -2,7 +2,7 @@
 
 A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes and fixes some graphical issues.
 
-**If you're looking for the Cursed Legacy edition, see this repository:** https://git.pixelatedw.xyz/wynd/finalbeta
+**If you're looking for the Cursed Legacy edition:** https://modrinth.com/mod/final-beta
 
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 

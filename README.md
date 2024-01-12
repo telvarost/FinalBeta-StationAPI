@@ -14,7 +14,11 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 ## List of tweaks from original mod
 
-The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod.
+The following features were added to the FinalBeta mod but were not a part of the original:
+
+Allowing pressure plates to be place-able on fences.
+
+The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 
 <details><summary>Updated list of blocks that pickaxes and axes can mine quicker</summary>
 
@@ -76,16 +80,6 @@ After:
 </details>
 
 <details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
-
-Before:
-![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
-
-After:
-![torches with a bottom texture](https://i.imgur.com/pBmy6UX.png)
-
-</details>
-
-Fixing the grass block inventory item having the incorrect top texture.
 
 As well as a few of other minor issues such as the useless 10mb array wasting resources. (I think this change was crashing the mod)
 
@@ -220,6 +214,15 @@ After:<br>
 
 </details>
 
+Before:
+![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
+
+After:
+FinalBeta-StationAPI Edition fixes this differently than the cursed legacy version of the mod.
+The fix in this version of the mod uses a json model that adds some tilted pixels to the bottom of the torches.
+
+</details>
+
 <details><summary>Fixes furnaces consuming the buckets as well when using lava buckets</summary>
 
 Before:<br>
@@ -230,6 +233,8 @@ After:
 
 </details>
 <br>
+
+Fixes the grass block inventory item having the incorrect top texture.
 
 ## Installation using Prism Launcher
 

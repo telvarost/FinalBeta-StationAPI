@@ -81,15 +81,7 @@ After:
 
 <details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
 
-Before:
-![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
-
-After:
-![torches with a bottom texture](https://i.imgur.com/pBmy6UX.png)
-
-</details>
-
-Fixing the grass block inventory item having the incorrect top texture
+As well as a few of other minor issues such as the useless 10mb array wasting resources. (I think this change was crashing the mod)
 
 ## List of changes
 
@@ -222,6 +214,15 @@ After:<br>
 
 </details>
 
+Before:
+![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
+
+After:
+FinalBeta-StationAPI Edition fixes this differently than the cursed legacy version of the mod.
+The fix in this version of the mod uses a json model that adds some tilted pixels to the bottom of the torches.
+
+</details>
+
 <details><summary>Fixes furnaces consuming the buckets as well when using lava buckets</summary>
 
 Before:<br>
@@ -233,7 +234,7 @@ After:
 </details>
 <br>
 
-As well as a few of other minor issues such as the useless 10mb array wasting resources.
+Fixes the grass block inventory item having the incorrect top texture.
 
 ## Installation using Prism Launcher
 

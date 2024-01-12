@@ -100,6 +100,18 @@ After:<br>
 
 </details>
 
+<details><summary>Fixes double doors not working with pressure plates (Fixed in VanillaBlockEnhancements, sort of)</summary>
+
+Before:<br>
+<video controls src="https://i.imgur.com/WWcOZA0.mp4"/>
+
+After:<br>
+<video controls src="https://i.imgur.com/8Dj19lR.mp4" />
+
+**Note**: This is not the prettiest of fixes and edge cases might still exist as I didn't test it in normal gameplay for long periods of time. If you experience any issues with already placed doors break them and then place them again, this should fix them.
+
+</details>
+
 As well as a few of other minor issues:
 - replaces the fence's bulky hitbox with a more slim version (Fixed in AnnoyanceFix-StationAPI)
 - made the chicken hitbox slightly taller (Fixed in AnnoyanceFix-StationAPI)
@@ -255,18 +267,6 @@ Before:<br>
 
 After:
 <video controls src="https://i.imgur.com/4O7Fo8V.mp4" />
-
-</details>
-
-<details><summary>Fixes double doors not working with pressure plates</summary>
-
-Before:<br>
-<video controls src="https://i.imgur.com/WWcOZA0.mp4"/>
-
-After:<br>
-<video controls src="https://i.imgur.com/8Dj19lR.mp4" />
-
-**Note**: This is not the prettiest of fixes and edge cases might still exist as I didn't test it in normal gameplay for long periods of time. If you experience any issues with already placed doors break them and then place them again, this should fix them.
 
 </details>
 

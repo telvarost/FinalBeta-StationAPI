@@ -37,8 +37,8 @@ public class Config {
         @ConfigName("Fix bow models")
         public static Boolean FIX_BOW_MODEL = true;
 
-        @ConfigName("Fix double doors")
-        public static Boolean FIX_DOUBLE_DOORS = true;
+//        @ConfigName("Fix double doors")
+//        public static Boolean FIX_DOUBLE_DOORS = true;
 
         @ConfigName("Fix fishing")
         public static Boolean FIX_FISHING = true;

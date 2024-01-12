@@ -2,7 +2,7 @@
 
 A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes and fixes some graphical issues.
 
-**If you're looking for the Cursed Legacy edition, see this repository:** https://git.pixelatedw.xyz/wynd/finalbeta
+**If you're looking for the Cursed Legacy edition:** https://modrinth.com/mod/final-beta
 
 **If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
 
@@ -20,7 +20,7 @@ Allowing pressure plates to be place-able on fences.
 
 The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 
-<details><summary>Updated list of blocks that pickaxes and axes can mine quicker</summary>
+<details><summary>Updated list of blocks that pickaxes and axes can mine quicker (Fixed in AnnoyanceFix-StationAPI)</summary>
 
 **Extra pickaxe blocks:**
 - Cobblestone stairs
@@ -51,7 +51,7 @@ The following features were removed either because I failed to port them correct
 
 </details>
 
-<details><summary>Stairs will now drop themselves rather than cobble/planks</summary>
+<details><summary>Stairs will now drop themselves rather than cobble/planks (Fixed in AnnoyanceFix-StationAPI)</summary>
 
 Before:<br>
 <video controls src="https://i.imgur.com/QSq8E8m.mp4" />
@@ -61,7 +61,7 @@ After:<br>
 
 </details>
 
-<details><summary>Fixes saddled pigs not dropping their saddles on death</summary>
+<details><summary>Fixes saddled pigs not dropping their saddles on death (Fixed in AnnoyanceFix-StationAPI)</summary>
 
 Before:
 <video controls src="https://i.imgur.com/PVLRNn5.mp4"/>
@@ -71,17 +71,51 @@ After:
 
 </details>
 
-<details><summary>Chest sounds</summary>
+<details><summary>Two different config options to handle how boats break (Fixed in AnnoyanceFix-StationAPI, although with less config)</summary>
 
-- Opening / closing chests
-
-**Note: The mod doesn't add any sounds by itself, all of these sounds are already present in your "resources" folder, they are automatically downloaded by Minecraft itself**
+- Default config (value of 2) allows boats to break only when they crash with almost maximum speed. Making them less likely to break randomly.
+- A value of 1 disables boat breaking logic entirely.
 
 </details>
 
-<details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
+<details><summary>Items can now be repaired at crafting tables (Fixed in AnnoyanceFix-StationAPI)</summary>
 
-As well as a few of other minor issues such as the useless 10mb array wasting resources. (I think this change was crashing the mod)
+<video controls src="https://i.imgur.com/UrLHQDh.mp4" />
+
+</details>
+
+<details><summary>Dyed wool can be turned back into white wool using bone meal (Fixed in MostlyModernRecipes-StationAPI)</summary>
+
+<video controls src="https://i.imgur.com/Uwk3K2t.mp4" />
+
+</details>
+
+<details><summary>Fixes bookshelves not dropping anything when mined (Fixed in AnnoyanceFix-StationAPI)</summary>
+
+Before:<br>
+<video controls src="https://i.imgur.com/9dt46cf.mp4"/>
+
+After:<br>
+<video controls src="https://i.imgur.com/v9nEcfp.mp4" />
+
+</details>
+
+<details><summary>Fixes double doors not working with pressure plates (Fixed in VanillaBlockEnhancements, sort of)</summary>
+
+Before:<br>
+<video controls src="https://i.imgur.com/WWcOZA0.mp4"/>
+
+After:<br>
+<video controls src="https://i.imgur.com/8Dj19lR.mp4" />
+
+**Note**: This is not the prettiest of fixes and edge cases might still exist as I didn't test it in normal gameplay for long periods of time. If you experience any issues with already placed doors break them and then place them again, this should fix them.
+
+</details>
+
+As well as a few of other minor issues:
+- replaces the fence's bulky hitbox with a more slim version (Fixed in AnnoyanceFix-StationAPI)
+- made the chicken hitbox slightly taller (Fixed in AnnoyanceFix-StationAPI)
+- removing the useless 10mb array wasting resources (Fixed in SmoothBeta I would guess)
 
 ## List of changes
 
@@ -95,6 +129,7 @@ As well as a few of other minor issues such as the useless 10mb array wasting re
 
 <details><summary>More sounds</summary>
 
+- Opening / closing chests
 - Minecarts
 - Items breaking
 
@@ -214,6 +249,8 @@ After:<br>
 
 </details>
 
+<details><summary>Fixes torches (and redstone torches) not having a bottom texture</summary>
+
 Before:
 ![torches without a bottom texture](https://i.imgur.com/pueAKg3.png)
 
@@ -232,9 +269,15 @@ After:
 <video controls src="https://i.imgur.com/4O7Fo8V.mp4" />
 
 </details>
+
 <br>
 
-Fixes the grass block inventory item having the incorrect top texture.
+As well as a bunch of other minor issues not worth having before/after images such as:
+
+- fixes grass block items being rendered incorrectly
+- allows the use of `shift` key to drop the entire held stack and to exit vehicles
+- adds a config option that disables nightmares (mosters spawning at your bed while sleeping), disabled by default
+- adds a config option that disables bed functionality (so no more spawn point setting or night skipping), disabled by default
 
 ## Installation using Prism Launcher
 

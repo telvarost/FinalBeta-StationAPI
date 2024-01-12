@@ -19,6 +19,9 @@ public class Config {
         @ConfigName("Allow sugarcane to be placed on sand")
         public static Boolean sugarCaneFixesEnabled = true;
 
+        @ConfigName("Allow pressure plates to be placed on fences")
+        public static Boolean pressurePlateFixesEnabled = true;
+
         @ConfigName("Disable id tags")
         public static Boolean DISABLE_ID_TAGS = true;
 

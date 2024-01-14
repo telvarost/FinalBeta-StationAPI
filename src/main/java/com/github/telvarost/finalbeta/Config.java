@@ -17,7 +17,7 @@ public class Config {
         public static Boolean ADD_MORE_SOUNDS = true;
 
         @ConfigName("Add \"Shift + DROP_KEY\" to drop item stack")
-        public static Boolean STACK_DROP = true;
+        public static Boolean STACK_DROP = false;
 
         @ConfigName("Allow sugarcane to be placed on sand")
         public static Boolean sugarCaneFixesEnabled = true;

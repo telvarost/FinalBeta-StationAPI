@@ -275,7 +275,9 @@ After:
 As well as a bunch of other minor issues not worth having before/after images such as:
 
 - fixes grass block items being rendered incorrectly
-- allows the use of `shift` key to drop the entire held stack and to exit vehicles
+- allows the use of `shift` key + `DROP_KEY` to drop the entire held stack (default: false)
+  - modern Minecraft uses `left-ctrl` key + `DROP_KEY` to drop the entire held stack and this in implemented in MojangFix along with many other inventory fixes to match up with modern
+- allows the use of `shift` key to exit vehicles
 - adds a config option that disables nightmares (mosters spawning at your bed while sleeping), disabled by default
 - adds a config option that disables bed functionality (so no more spawn point setting or night skipping), disabled by default
 

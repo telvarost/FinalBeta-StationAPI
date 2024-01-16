@@ -20,11 +20,16 @@ public class ItemInstanceMixin {
 	private int damage;
 
 	@Inject(method = "applyDamage", at = @At("HEAD"))
-	public void finalBeta_applyDamage(int i, EntityBase arg, CallbackInfo ci) {
+	public void finalBeta_applyDamage(int i, EntityBase entityBase, CallbackInfo ci) {
 		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
 			ItemInstance item = (ItemInstance) (Object) this;
-			if (this.damage + i > item.getDurability()) {
-				arg.level.playSound(arg, "random.break", 0.5f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+
+			if (  (entityBase != null)
+			   && (item != null)
+			   && (this.damage + i > item.getDurability())
+			   )
+			{
+				entityBase.level.playSound(entityBase, "random.break", 0.5f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 			}		
 		}
 	}

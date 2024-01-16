@@ -17,12 +17,16 @@ public class FishHookMixin {
 		if(Config.ConfigFields.FIX_FISHING) {
 			Item item = args.get(0);
 			FishHook hook = (FishHook) (Object) this;
-			double x = hook.field_1067.x - hook.x;
-			double y = hook.field_1067.y - hook.y;
-			double z = hook.field_1067.z - hook.z;
-			item.velocityX = x * 0.1D;
-			item.velocityY = y * 0.1D + Math.sqrt(Math.sqrt(x * x + y * y + z * z)) * 0.05D;
-			item.velocityZ = z * 0.1D;
+
+			if (item != null)
+			{
+				double x = hook.field_1067.x - hook.x;
+				double y = hook.field_1067.y - hook.y;
+				double z = hook.field_1067.z - hook.z;
+				item.velocityX = x * 0.1D;
+				item.velocityY = y * 0.1D + Math.sqrt(Math.sqrt(x * x + y * y + z * z)) * 0.05D;
+				item.velocityZ = z * 0.1D;
+			}
 		}
 	}
 }

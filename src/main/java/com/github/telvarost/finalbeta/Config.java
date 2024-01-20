@@ -19,11 +19,11 @@ public class Config {
         @ConfigName("Add \"Shift + DROP_KEY\" to drop item stack")
         public static Boolean STACK_DROP = false;
 
-        @ConfigName("Allow sugarcane to be placed on sand")
-        public static Boolean sugarCaneFixesEnabled = true;
-
-        @ConfigName("Allow pressure plates to be placed on fences")
+        @ConfigName("Allow placing pressure plates on fences")
         public static Boolean pressurePlateFixesEnabled = true;
+
+        @ConfigName("Allow placing sugarcane on sand")
+        public static Boolean sugarCaneFixesEnabled = true;
 
         @ConfigName("Disable beds")
         public static Boolean DISABLE_BEDS = false;

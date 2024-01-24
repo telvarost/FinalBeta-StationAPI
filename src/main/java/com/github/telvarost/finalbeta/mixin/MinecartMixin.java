@@ -56,7 +56,7 @@ public class MinecartMixin {
 				pitch = 0.0f;
 			}
 
-			if (speed >= 0.01D && Config.ConfigFields.ADD_MORE_SOUNDS) {
+			if (speed >= 0.01D && Config.ConfigFields.ADD_MINECART_SOUNDS) {
 				if (minecart.field_1645 % 33 == 1) {
 					minecart.level.playSound(x, y, z, "minecart.base", volume, pitch);
 				}

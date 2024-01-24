@@ -32,7 +32,7 @@ class PressurePlateMixin extends BlockBase {
             )
     )
     public boolean annoyanceFix_canPlaceAt(Level arg, int i, int j, int k) {
-        if (Config.ConfigFields.pressurePlateFixesEnabled) {
+        if (Config.ConfigFields.ALLOW_PRESSURE_PLATES_ON_FENCES) {
             return true;
         }
         else
@@ -49,7 +49,7 @@ class PressurePlateMixin extends BlockBase {
             )
     )
     public boolean annoyanceFix_onAdjacentBlockUpdate(Level instance, int i, int j, int k) {
-        if (Config.ConfigFields.pressurePlateFixesEnabled) {
+        if (Config.ConfigFields.ALLOW_PRESSURE_PLATES_ON_FENCES) {
             int blockBelowPressurePlateId = instance.getTileId(i, j, k);
 
             if (BlockBase.FENCE.id == blockBelowPressurePlateId)

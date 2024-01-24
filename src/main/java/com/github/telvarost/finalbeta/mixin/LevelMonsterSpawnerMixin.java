@@ -21,5 +21,4 @@ public class LevelMonsterSpawnerMixin {
             cir.setReturnValue(false);
         }
     }
-
 }

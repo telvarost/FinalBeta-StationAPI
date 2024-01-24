@@ -20,7 +20,6 @@
     "OverlayMixin",
     "PlayerRendererMixin",
     "PressurePlateMixin",
-    "ScreenMixin",
     "SkeletonModelMixin",
     "SugarCaneMixin",
     "VideoSettingsScreenMixin",

@@ -21,7 +21,7 @@ public class ItemInstanceMixin {
 
 	@Inject(method = "applyDamage", at = @At("HEAD"))
 	public void finalBeta_applyDamage(int i, EntityBase entityBase, CallbackInfo ci) {
-		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
+		if(Config.ConfigFields.ADD_ITEM_BREAK_SOUNDS) {
 			ItemInstance item = (ItemInstance) (Object) this;
 
 			if (  (entityBase != null)

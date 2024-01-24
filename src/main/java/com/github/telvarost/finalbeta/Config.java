@@ -13,17 +13,20 @@ public class Config {
         @ConfigName("Add day counter to F3 overlay")
         public static Boolean ADD_DAY_COUNTER = true;
 
-        @ConfigName("Add more sounds")
-        public static Boolean ADD_MORE_SOUNDS = true;
+        @ConfigName("Add sound: Item Breaking")
+        public static Boolean ADD_ITEM_BREAK_SOUNDS = true;
 
-        @ConfigName("Add \"Shift + DROP_KEY\" to drop item stack")
-        public static Boolean STACK_DROP = false;
+        @ConfigName("Add sound: Minecart Rolling")
+        public static Boolean ADD_MINECART_SOUNDS = true;
+
+        @ConfigName("Add sound: Open/Close Chest")
+        public static Boolean ADD_CHEST_SOUNDS = true;
 
         @ConfigName("Allow placing pressure plates on fences")
-        public static Boolean pressurePlateFixesEnabled = true;
+        public static Boolean ALLOW_PRESSURE_PLATES_ON_FENCES = true;
 
         @ConfigName("Allow placing sugarcane on sand")
-        public static Boolean sugarCaneFixesEnabled = true;
+        public static Boolean ALLOW_SUGAR_CANE_ON_SAND = true;
 
         @ConfigName("Disable beds")
         public static Boolean DISABLE_BEDS = false;
@@ -37,8 +40,11 @@ public class Config {
         @ConfigName("Fix bow models")
         public static Boolean FIX_BOW_MODEL = true;
 
-//        @ConfigName("Fix double doors")
-//        public static Boolean FIX_DOUBLE_DOORS = true;
+        @ConfigName("Fix container label rendering")
+        public static Boolean FIX_CONTAINER_LABEL_RENDERING = true;
+
+        @ConfigName("Fix death screen text")
+        public static Boolean FIX_DEATH_SCREEN_TEXT = true;
 
         @ConfigName("Fix fishing")
         public static Boolean FIX_FISHING = true;
@@ -55,5 +61,10 @@ public class Config {
         @ConfigName("Fix minecart stopping on items")
         public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
 
+        @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
+        public static Boolean STACK_DROP = false;
+
+        @ConfigName("Use \"Shift\" to exit vehicles")
+        public static Boolean SHIFT_EXIT_VEHICLES = true;
     }
 }

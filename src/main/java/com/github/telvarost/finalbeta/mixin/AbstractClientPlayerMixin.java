@@ -44,12 +44,20 @@ public class AbstractClientPlayerMixin extends PlayerBase {
     public void finalBeta_method_136(int key, boolean state, CallbackInfo ci) {
         PlayerBase player = (PlayerBase) (Object) this;
 
-        if (player.vehicle != null && key == Keyboard.KEY_LSHIFT && state) {
+        if (  (Config.ConfigFields.SHIFT_EXIT_VEHICLES)
+           && (player.vehicle != null)
+           && (state)
+           && (key == Keyboard.KEY_LSHIFT)
+        ) {
             player.startRiding(null);
             return;
         }
 
-        if (Config.ConfigFields.STACK_DROP && key == this.minecraft.options.dropKey.key && state && Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+        if (  (Config.ConfigFields.STACK_DROP)
+           && (key == this.minecraft.options.dropKey.key)
+           && (state)
+           && (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+        ) {
             ItemInstance heldItem = player.inventory.getHeldItem();
             if (heldItem != null && heldItem.count > 0) {
                 player.dropItem(player.inventory.takeInventoryItem(player.inventory.selectedHotbarSlot, heldItem.count), false);
@@ -65,7 +73,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
 	public void finalBeta_openChestScreen(InventoryBase arg, CallbackInfo ci) {
 		this.minecraft.openScreen(new DoubleChest(this.inventory, arg));
 
-		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
+		if(Config.ConfigFields.ADD_CHEST_SOUNDS) {
 			PlayerBase player = (PlayerBase) (Object) this;
 			player.level.playSound(player, "random.chestopen", 0.3f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 		}
@@ -73,7 +81,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
 
 	@Inject(method = "closeContainer", at = @At("HEAD"))
 	public void finalBeta_closeContainer(CallbackInfo ci) {
-		if(Config.ConfigFields.ADD_MORE_SOUNDS) {
+		if(Config.ConfigFields.ADD_CHEST_SOUNDS) {
 			PlayerBase player = (PlayerBase) (Object) this;
 			if(player.container instanceof Chest) {
 				player.level.playSound(player, "random.chestclosed", 0.3f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);

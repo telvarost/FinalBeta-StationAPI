@@ -2,6 +2,7 @@ package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
 import com.github.telvarost.finalbeta.ModHelper;
+import net.minecraft.client.gui.screen.ScreenBase;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -12,7 +13,7 @@ import net.minecraft.client.gui.widgets.Button;
 import net.minecraft.client.resource.language.TranslationStorage;
 
 @Mixin(VideoSettings.class)
-public class VideoSettingsScreenMixin extends ScreenMixin {
+public class VideoSettingsScreenMixin extends ScreenBase {
 
 	@Inject(method = "init", at = @At("TAIL"))
 	public void finalBeta_init(CallbackInfo ci) {

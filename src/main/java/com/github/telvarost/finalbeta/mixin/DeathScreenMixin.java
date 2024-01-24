@@ -25,15 +25,20 @@ public class DeathScreenMixin extends ScreenBase {
 					ordinal = 1
 			)
 	)
-	private void finalBeta_getResourcesUrl(Death instance, TextRenderer textRenderer, String s, int i, int j, int k) {
-		int currentScore = 0;
-		PlayerBase player = PlayerHelper.getPlayerFromGame();
+	private void finalBeta_renderDeathScreenText(Death instance, TextRenderer textRenderer, String s, int i, int j, int k) {
+		if (Config.ConfigFields.FIX_DEATH_SCREEN_TEXT) {
+			int currentScore = 0;
+			PlayerBase player = PlayerHelper.getPlayerFromGame();
 
-		if (null != player)
-		{
-			currentScore = player.score;
+			if (null != player) {
+				currentScore = player.score;
+			}
+
+			this.drawTextWithShadowCentred(textRenderer, "Score: \u00a7e" + currentScore, i, j, k);
 		}
-
-		this.drawTextWithShadowCentred(textRenderer, "Score: \u00a7e" + currentScore, i, j, k);
+		else
+		{
+			this.drawTextWithShadowCentred(textRenderer, s, i, j, k);
+		}
 	}
 }

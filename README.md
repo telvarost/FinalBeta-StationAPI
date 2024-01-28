@@ -16,6 +16,7 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 The following features were added to the FinalBeta mod but were not a part of the original:
 
+* Extra menu controls for changing clouds, fog, and FOV.
 * Extra config options for enabling/disabling different parts of the mod.
 * Allowing pressure plates to be place-able on fences.
 * Each block placed/removed adds +1 to score.

@@ -32,14 +32,4 @@ public abstract class OptionsScreenMixin extends ScreenBase {
         OPTIONS = Arrays.copyOf(OPTIONS, OPTIONS.length + 1);
         OptionsScreenMixin.OPTIONS[OptionsScreenMixin.OPTIONS.length - 1] = ModOptions.fovOption;
     }
-
-    @Inject(method = "buttonClicked", at = @At("HEAD"), cancellable = true)
-    public void finalBeta_openImprovedControls(Button button, CallbackInfo ci) {
-        if (Config.ConfigFields.IMPROVED_MENU_CONTROLS) {
-            if (button.id == 100) {
-                this.minecraft.openScreen(new Controls(this, this.gameOptions));
-                ci.cancel();
-            }
-        }
-    }
 }

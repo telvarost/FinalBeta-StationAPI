@@ -54,9 +54,10 @@ public class Config {
         @ConfigName("Fix minecart stopping on items")
         public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
 
-        @ConfigName("Improved option/video menu controls")
-        @Comment("Adds controls for clouds, fog, and FOV")
-        public static Boolean IMPROVED_MENU_CONTROLS = true;
+        /** - At the current moment this is not toggle-able */
+//        @ConfigName("Improved option/video menu controls")
+//        @Comment("Adds controls for clouds, fog, and FOV")
+//        public static Boolean IMPROVED_MENU_CONTROLS = true;
 
         @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
         public static Boolean STACK_DROP = false;

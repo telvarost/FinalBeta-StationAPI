@@ -18,10 +18,10 @@ The following features were added to the FinalBeta mod but were not a part of th
 
 * Extra menu controls for changing clouds, fog, and FOV.
 * Extra config options for enabling/disabling different parts of the mod.
-* Allowing pressure plates to be place-able on fences.
 * Each block placed/removed adds +1 to score.
 * Each monster mob killed adds +1 to score.
 * Each passive mob killed adds +1 to score.
+* Allowing pressure plates to be place-able on fences.
 
 The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 

@@ -54,7 +54,7 @@ public class Config {
         @ConfigName("Fix minecart stopping on items")
         public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
 
-        @ConfigName("Improved menu controls")
+        @ConfigName("Improved option/video menu controls")
         @Comment("Adds controls for clouds, fog, and FOV")
         public static Boolean IMPROVED_MENU_CONTROLS = true;
 

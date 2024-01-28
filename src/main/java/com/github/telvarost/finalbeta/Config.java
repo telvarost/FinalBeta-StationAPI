@@ -1,5 +1,6 @@
 package com.github.telvarost.finalbeta;
 
+import net.glasslauncher.mods.api.gcapi.api.ConfigCategory;
 import net.glasslauncher.mods.api.gcapi.api.ConfigName;
 import net.glasslauncher.mods.api.gcapi.api.GConfig;
 
@@ -37,6 +38,30 @@ public class Config {
         @ConfigName("Disable nightmares")
         public static Boolean DISABLE_NIGHTMARES = false;
 
+        @ConfigName("Fix caught fish going above player head")
+        public static Boolean FIX_FISHING = true;
+
+        @ConfigName("Fix lava bucket being consumed in furnace")
+        public static Boolean FIX_FURNACE_LAVA_BUCKET = true;
+
+        @ConfigName("Fix minecart stopping on items")
+        public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
+
+        @ConfigCategory("Graphical Fixes")
+        public static GraphicsConfig GRAPHICS_CONFIG = new GraphicsConfig();
+
+        @ConfigCategory("Score Config")
+        public static ScoreConfig SCORE_CONFIG = new ScoreConfig();
+
+        @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
+        public static Boolean STACK_DROP = false;
+
+        @ConfigName("Use \"Shift\" to exit vehicles")
+        public static Boolean SHIFT_EXIT_VEHICLES = true;
+    }
+
+    public static class GraphicsConfig {
+
         @ConfigName("Fix bow models")
         public static Boolean FIX_BOW_MODEL = true;
 
@@ -46,25 +71,25 @@ public class Config {
         @ConfigName("Fix death screen text")
         public static Boolean FIX_DEATH_SCREEN_TEXT = true;
 
-        @ConfigName("Fix fishing")
-        public static Boolean FIX_FISHING = true;
-
-        @ConfigName("Fix furnace lava bucket")
-        public static Boolean FIX_FURNACE_LAVA_BUCKET = true;
-
         @ConfigName("Fix leg armor on vehicles")
         public static Boolean FIX_LEG_ARMOR_ON_VEHICLES = true;
 
         @ConfigName("Fix minecart flickering")
         public static Boolean FIX_MINECART_FLICKERING = true;
+    }
 
-        @ConfigName("Fix minecart stopping on items")
-        public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
+    public static class ScoreConfig {
 
-        @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
-        public static Boolean STACK_DROP = false;
+        @ConfigName("Each block placed adds +1 to score")
+        public static Boolean ADD_SCORE_ON_BLOCK_PLACED = true;
 
-        @ConfigName("Use \"Shift\" to exit vehicles")
-        public static Boolean SHIFT_EXIT_VEHICLES = true;
+        @ConfigName("Each block removed adds +1 to score")
+        public static Boolean ADD_SCORE_ON_BLOCK_REMOVED = true;
+
+        @ConfigName("Each monster mob killed adds +1 to score")
+        public static Boolean ADD_SCORE_ON_MONSTER_KILLED = true;
+
+        @ConfigName("Each passive mob killed adds +1 to score")
+        public static Boolean ADD_SCORE_ON_PASSIVE_KILLED = true;
     }
 }

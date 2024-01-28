@@ -2,7 +2,6 @@ package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
 import com.github.telvarost.finalbeta.ModHelper;
-import net.minecraft.block.Furnace;
 import net.minecraft.inventory.InventoryBase;
 import net.minecraft.item.ItemBase;
 import net.minecraft.tileentity.TileEntityBase;
@@ -14,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.item.ItemInstance;
-import net.minecraft.item.ItemBase;
 
 @Mixin(TileEntityFurnace.class)
 public abstract class FurnaceEntityMixin extends TileEntityBase implements InventoryBase {

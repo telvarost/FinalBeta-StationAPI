@@ -16,7 +16,11 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 The following features were added to the FinalBeta mod but were not a part of the original:
 
-Allowing pressure plates to be place-able on fences.
+* Extra config options for enabling/disabling different parts of the mod.
+* Allowing pressure plates to be place-able on fences.
+* Each block placed/removed adds +1 to score.
+* Each monster mob killed adds +1 to score.
+* Each passive mob killed adds +1 to score.
 
 The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 

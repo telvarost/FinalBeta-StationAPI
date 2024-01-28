@@ -43,7 +43,7 @@ public class MinecartMixin {
 			float volume = 0;
 			float pitch = 0;
 			if (speed >= 0.01D) {
-				if (minecart.passenger != null && Config.ConfigFields.FIX_MINECART_FLICKERING) {
+				if (minecart.passenger != null && Config.GraphicsConfig.FIX_MINECART_FLICKERING) {
 					minecart.boundingBox.method_99(minecart.boundingBox.minX - EXTRA_MINECART_XZ_SIZE, minecart.boundingBox.minY,
 							minecart.boundingBox.minZ - EXTRA_MINECART_XZ_SIZE, minecart.boundingBox.maxX + EXTRA_MINECART_XZ_SIZE,
 							minecart.boundingBox.maxY + EXTRA_MINECART_Y_SIZE, minecart.boundingBox.maxZ + EXTRA_MINECART_XZ_SIZE);

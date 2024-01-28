@@ -28,7 +28,7 @@ public class ContainerScreenMixin extends ScreenBase {
 
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/container/ContainerBase;renderForeground()V", shift = Shift.AFTER))
 	public void finalBeta_onRender(int i, int j, float f, CallbackInfo ci) {
-		if (!Config.ConfigFields.FIX_CONTAINER_LABEL_RENDERING)
+		if (!Config.GraphicsConfig.FIX_CONTAINER_LABEL_RENDERING)
 		{
 			return;
 		}

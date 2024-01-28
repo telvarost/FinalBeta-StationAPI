@@ -25,7 +25,7 @@ public class BipedRendererMixin {
 			)
 	)
 	public void finalBeta_playerRendering(Living entity, float f, CallbackInfo ci) {
-		if(Config.ConfigFields.FIX_BOW_MODEL) {
+		if(Config.GraphicsConfig.FIX_BOW_MODEL) {
 			ItemInstance item = entity.getMonsterHeldItem(); // this may be wrong .getMonsterHeldItem()
 			if (item != null && item.itemId == ItemBase.bow.id) {
 				GL11.glRotatef(-5, 1, 0, 0);

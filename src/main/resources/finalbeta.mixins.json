@@ -4,6 +4,10 @@
   "package": "com.github.telvarost.finalbeta.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "options.GameOptionsMixin",
+    "options.OptionMixin",
+    "options.OptionsScreenMixin",
+    "options.VideoSettingsMixin",
     "AbstractClientPlayerMixin",
     "BedMixin",
     "BipedRendererMixin",
@@ -12,6 +16,7 @@
     "ContainerScreenMixin",
     "DeathScreenMixin",
     "FishHookMixin",
+    "GameRendererMixin",
     "FurnaceEntityMixin",
     "ItemInstanceMixin",
     "LevelMonsterSpawnerMixin",
@@ -24,7 +29,6 @@
     "PressurePlateMixin",
     "SkeletonModelMixin",
     "SugarCaneMixin",
-    "VideoSettingsScreenMixin",
     "WorldRendererMixin"
   ],
   "server": [

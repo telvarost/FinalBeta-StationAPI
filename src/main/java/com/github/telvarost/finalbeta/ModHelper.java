@@ -13,7 +13,6 @@ public class ModHelper {
     }
 
     public static class ModHelperFields {
-        public static Boolean ENABLE_CLOUDS = true;
         public static Boolean IS_LAVA_BUCKET_CONSUMED = false;
     }
 }

@@ -1,5 +1,6 @@
 package com.github.telvarost.finalbeta;
 
+import blue.endless.jankson.Comment;
 import net.glasslauncher.mods.api.gcapi.api.ConfigCategory;
 import net.glasslauncher.mods.api.gcapi.api.ConfigName;
 import net.glasslauncher.mods.api.gcapi.api.GConfig;
@@ -10,6 +11,12 @@ public class Config {
     public static ConfigFields config = new ConfigFields();
 
     public static class ConfigFields {
+
+        @ConfigCategory("Graphical Fixes")
+        public static GraphicsConfig GRAPHICS_CONFIG = new GraphicsConfig();
+
+        @ConfigCategory("Score Config")
+        public static ScoreConfig SCORE_CONFIG = new ScoreConfig();
 
         @ConfigName("Add day counter to F3 overlay")
         public static Boolean ADD_DAY_COUNTER = true;
@@ -47,11 +54,9 @@ public class Config {
         @ConfigName("Fix minecart stopping on items")
         public static Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
 
-        @ConfigCategory("Graphical Fixes")
-        public static GraphicsConfig GRAPHICS_CONFIG = new GraphicsConfig();
-
-        @ConfigCategory("Score Config")
-        public static ScoreConfig SCORE_CONFIG = new ScoreConfig();
+        @ConfigName("Improved menu controls")
+        @Comment("Adds controls for clouds, fog, and FOV")
+        public static Boolean IMPROVED_MENU_CONTROLS = true;
 
         @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
         public static Boolean STACK_DROP = false;

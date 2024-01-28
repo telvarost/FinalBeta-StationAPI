@@ -4,10 +4,11 @@
   "version": "${version}",
 
   "name": "FinalBeta",
-  "description": "Adds some quality of life changes and fixes some graphical issues.",
+  "description": "Adds some quality of life changes and fixes some graphical issues. Special thanks to Dany and Wynd for helping with many of the changes and fixes.",
   "authors": [
     "Telvarost",
-    "Wynd"
+    "Wynd",
+    "Dany"
   ],
   "contact": {
     "issues": "https://github.com/telvarost/FinalBeta-StationAPI/issues",

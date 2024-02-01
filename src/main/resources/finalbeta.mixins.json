@@ -29,6 +29,7 @@
     "PressurePlateMixin",
     "SkeletonModelMixin",
     "SugarCaneMixin",
+    "TrapdoorMixin",
     "WorldRendererMixin"
   ],
   "server": [

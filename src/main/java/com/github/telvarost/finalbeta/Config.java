@@ -36,6 +36,9 @@ public class Config {
         @ConfigName("Allow placing sugarcane on sand")
         public static Boolean ALLOW_SUGAR_CANE_ON_SAND = true;
 
+        @ConfigName("Allow placing trapdoors without support")
+        public static Boolean ALLOW_TRAPDOORS_WITHOUT_SUPPORTS = true;
+
         @ConfigName("Disable beds")
         public static Boolean DISABLE_BEDS = false;
 

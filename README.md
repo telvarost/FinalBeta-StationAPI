@@ -22,6 +22,7 @@ The following features were added to the FinalBeta mod but were not a part of th
 * Each monster mob killed adds +1 to score.
 * Each passive mob killed adds +1 to score.
 * Allowing pressure plates to be place-able on fences.
+* Allowing trapdoors to be placed without having a supporting block.
 
 The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
 

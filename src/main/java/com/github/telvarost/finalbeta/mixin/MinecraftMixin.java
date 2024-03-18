@@ -3,6 +3,8 @@ package com.github.telvarost.finalbeta.mixin;
 import com.github.telvarost.finalbeta.Config;
 import java.io.File;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.PixelFormat;
@@ -14,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.client.Minecraft;
 
+@Environment(EnvType.CLIENT)
 @Mixin(Minecraft.class)
 public class MinecraftMixin {
 

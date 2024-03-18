@@ -2,6 +2,8 @@ package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.PlayerKeypressManager;
 import net.minecraft.client.gui.screen.container.DoubleChest;
@@ -21,6 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.entity.player.PlayerBase;
 import net.minecraft.inventory.InventoryBase;
 
+@Environment(EnvType.CLIENT)
 @Mixin(AbstractClientPlayer.class)
 public class AbstractClientPlayerMixin extends PlayerBase {
     @Shadow public PlayerKeypressManager playerKeypressManager;

@@ -22,7 +22,14 @@ public abstract class FurnaceEntityMixin extends TileEntityBase implements Inven
 
 	@Shadow public int burnTime;
 
-	@Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/tileentity/TileEntityFurnace;getFuelTime(Lnet/minecraft/item/ItemInstance;)I", shift = At.Shift.BY, by = 5), cancellable = true)
+	@Inject(
+			method = "tick",
+			at = @At(
+					value = "INVOKE",
+					target = "Lnet/minecraft/tileentity/TileEntityFurnace;getFuelTime(Lnet/minecraft/item/ItemInstance;)I"
+			),
+			cancellable = true
+	)
 	public void finalBeta_tickConsumeLavaBucket(CallbackInfo ci) {
 		if(Config.ConfigFields.FIX_FURNACE_LAVA_BUCKET) {
 			if(this.inventory[1] != null && this.inventory[1].itemId == ItemBase.lavaBucket.id) {

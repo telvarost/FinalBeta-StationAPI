@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin.options;
 
 import com.github.telvarost.finalbeta.ModOptions;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenBase;
 import net.minecraft.client.gui.screen.menu.VideoSettings;
 import net.minecraft.client.gui.widgets.Button;
@@ -20,6 +22,7 @@ import java.util.Arrays;
 /** - All credit for the code in this class goes to Dany and his mod UniTweaks
  *  See: https://github.com/DanyGames2014/UniTweaks
  */
+@Environment(EnvType.CLIENT)
 @Mixin(VideoSettings.class)
 public class VideoSettingsMixin extends ScreenBase {
 	@Shadow

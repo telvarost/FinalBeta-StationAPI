@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenBase;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +17,7 @@ import net.minecraft.client.render.RenderHelper;
 import net.minecraft.client.render.entity.ItemRenderer;
 import net.minecraft.entity.player.PlayerInventory;
 
+@Environment(EnvType.CLIENT)
 @Mixin(ContainerBase.class)
 public class ContainerScreenMixin extends ScreenBase {
 

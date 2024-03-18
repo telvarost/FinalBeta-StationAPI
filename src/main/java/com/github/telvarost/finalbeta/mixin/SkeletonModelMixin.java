@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -10,6 +12,7 @@ import net.minecraft.client.render.entity.model.Biped;
 import net.minecraft.client.render.entity.model.Skeleton;
 import net.minecraft.client.render.entity.model.Zombie;
 
+@Environment(EnvType.CLIENT)
 @Mixin(Zombie.class)
 public class SkeletonModelMixin {
 	@Inject(method = "setAngles", at = @At("TAIL"))

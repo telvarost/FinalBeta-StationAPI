@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +13,7 @@ import net.minecraft.client.render.entity.LivingEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelBase;
 import net.minecraft.entity.Living;
 
+@Environment(EnvType.CLIENT)
 @Mixin(LivingEntityRenderer.class)
 public class LivingEntityRendererMixin {
 	@Shadow

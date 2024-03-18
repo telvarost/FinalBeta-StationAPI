@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin.options;
 
 import com.github.telvarost.finalbeta.ModOptions;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.options.GameOptions;
 import net.minecraft.client.options.Option;
 import net.minecraft.client.resource.language.TranslationStorage;
@@ -18,6 +20,7 @@ import java.io.PrintWriter;
 /** - All credit for the code in this class goes to Dany and his mod UniTweaks
  *  See: https://github.com/DanyGames2014/UniTweaks
  */
+@Environment(EnvType.CLIENT)
 @Mixin(GameOptions.class)
 public abstract class GameOptionsMixin {
     @Shadow

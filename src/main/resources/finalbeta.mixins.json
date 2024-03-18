@@ -4,37 +4,37 @@
   "package": "com.github.telvarost.finalbeta.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BedMixin",
+    "BlockBaseMixin",
+    "BowItemMixin",
+    "FishHookMixin",
+    "FurnaceEntityMixin",
+    "ItemInstanceMixin",
+    "LevelMonsterSpawnerMixin",
+    "LivingMixin",
+    "MinecartMixin",
+    "PressurePlateMixin",
+    "SugarCaneMixin",
+    "TrapdoorMixin"
+  ],
+  "server": [
+  ],
+  "client": [
     "options.GameOptionsMixin",
     "options.OptionMixin",
     "options.OptionsScreenMixin",
     "options.VideoSettingsMixin",
     "AbstractClientPlayerMixin",
-    "BedMixin",
     "BipedRendererMixin",
-    "BlockBaseMixin",
-    "BowItemMixin",
     "ContainerScreenMixin",
     "DeathScreenMixin",
-    "FishHookMixin",
     "GameRendererMixin",
-    "FurnaceEntityMixin",
-    "ItemInstanceMixin",
-    "LevelMonsterSpawnerMixin",
     "LivingEntityRendererMixin",
-    "LivingMixin",
-    "MinecartMixin",
     "MinecraftMixin",
     "OverlayMixin",
     "PlayerRendererMixin",
-    "PressurePlateMixin",
     "SkeletonModelMixin",
-    "SugarCaneMixin",
-    "TrapdoorMixin",
     "WorldRendererMixin"
-  ],
-  "server": [
-  ],
-  "client": [
   ],
   "injectors": {
     "defaultRequire": 1

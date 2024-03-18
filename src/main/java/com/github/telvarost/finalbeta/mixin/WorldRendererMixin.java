@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.ModOptions;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.level.dimension.Dimension;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 /** - All credit for the code in this class goes to Dany and his mod UniTweaks
  *  See: https://github.com/DanyGames2014/UniTweaks
  */
+@Environment(EnvType.CLIENT)
 @Mixin(WorldRenderer.class)
 public class WorldRendererMixin {
 

@@ -2,6 +2,8 @@ package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.ModHelper;
 import com.github.telvarost.finalbeta.ModOptions;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Living;
@@ -20,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 /** - All credit for the code in this class goes to Dany and his mod UniTweaks
  *  See: https://github.com/DanyGames2014/UniTweaks
  */
+@Environment(EnvType.CLIENT)
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
     @Shadow

@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ScreenBase;
 import net.minecraft.client.render.TextRenderer;
 import net.minecraft.entity.player.PlayerBase;
@@ -11,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import net.minecraft.client.gui.screen.ingame.Death;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
+@Environment(EnvType.CLIENT)
 @Mixin(Death.class)
 public class DeathScreenMixin extends ScreenBase {
 

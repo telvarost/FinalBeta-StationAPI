@@ -1,6 +1,8 @@
 package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -16,6 +18,7 @@ import net.minecraft.item.ItemInstance;
 import net.minecraft.item.ItemBase;
 import net.minecraft.item.armour.Armour;
 
+@Environment(EnvType.CLIENT)
 @Mixin(PlayerRenderer.class)
 public class PlayerRendererMixin extends LivingEntityRendererMixin {
 

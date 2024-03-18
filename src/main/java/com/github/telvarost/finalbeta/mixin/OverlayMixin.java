@@ -2,6 +2,8 @@ package com.github.telvarost.finalbeta.mixin;
 
 import com.github.telvarost.finalbeta.Config;
 import com.github.telvarost.finalbeta.ModHelper;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.stat.Stats;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,6 +21,7 @@ import net.minecraft.client.render.TextRenderer;
 
 import java.time.Duration;
 
+@Environment(EnvType.CLIENT)
 @Mixin(InGame.class)
 public class OverlayMixin extends DrawableHelper {
 

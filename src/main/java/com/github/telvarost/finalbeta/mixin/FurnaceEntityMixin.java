@@ -33,16 +33,16 @@ public abstract class FurnaceEntityMixin extends TileEntityBase implements Inven
 	public void finalBeta_tickConsumeLavaBucket(CallbackInfo ci) {
 		if(Config.config.FIX_FURNACE_LAVA_BUCKET) {
 			if(this.inventory[1] != null && this.inventory[1].itemId == ItemBase.lavaBucket.id) {
-				ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED = true;
+				ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED++;
 			}			
 		}
 	}
 
 	@Inject(method = "tick", at = @At(value = "RETURN"))
 	public void finalBeta_tickConsumeLavaBucketReturnEmptyBucket(CallbackInfo ci) {
-		if(ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED) {
+		if(0 < ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED) {
 			this.inventory[1] = new ItemInstance(ItemBase.bucket);
-			ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED = false;
+			ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED--;
 		}
 	}
 }

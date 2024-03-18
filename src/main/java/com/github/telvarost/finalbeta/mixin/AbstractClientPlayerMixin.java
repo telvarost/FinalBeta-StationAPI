@@ -47,7 +47,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
     public void finalBeta_method_136(int key, boolean state, CallbackInfo ci) {
         PlayerBase player = (PlayerBase) (Object) this;
 
-        if (  (Config.ConfigFields.SHIFT_EXIT_VEHICLES)
+        if (  (Config.config.SHIFT_EXIT_VEHICLES)
            && (player.vehicle != null)
            && (state)
            && (key == Keyboard.KEY_LSHIFT)
@@ -56,7 +56,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
             return;
         }
 
-        if (  (Config.ConfigFields.STACK_DROP)
+        if (  (Config.config.STACK_DROP)
            && (key == this.minecraft.options.dropKey.key)
            && (state)
            && (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
@@ -76,7 +76,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
 	public void finalBeta_openChestScreen(InventoryBase arg, CallbackInfo ci) {
 		this.minecraft.openScreen(new DoubleChest(this.inventory, arg));
 
-		if(Config.ConfigFields.ADD_CHEST_SOUNDS) {
+		if(Config.config.ADD_CHEST_SOUNDS) {
 			PlayerBase player = (PlayerBase) (Object) this;
 			player.level.playSound(player, "random.chestopen", 0.3f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
 		}
@@ -84,7 +84,7 @@ public class AbstractClientPlayerMixin extends PlayerBase {
 
 	@Inject(method = "closeContainer", at = @At("HEAD"))
 	public void finalBeta_closeContainer(CallbackInfo ci) {
-		if(Config.ConfigFields.ADD_CHEST_SOUNDS) {
+		if(Config.config.ADD_CHEST_SOUNDS) {
 			PlayerBase player = (PlayerBase) (Object) this;
 			if(player.container instanceof Chest) {
 				player.level.playSound(player, "random.chestclosed", 0.3f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);

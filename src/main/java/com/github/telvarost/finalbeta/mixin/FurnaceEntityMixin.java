@@ -31,7 +31,7 @@ public abstract class FurnaceEntityMixin extends TileEntityBase implements Inven
 			cancellable = true
 	)
 	public void finalBeta_tickConsumeLavaBucket(CallbackInfo ci) {
-		if(Config.ConfigFields.FIX_FURNACE_LAVA_BUCKET) {
+		if(Config.config.FIX_FURNACE_LAVA_BUCKET) {
 			if(this.inventory[1] != null && this.inventory[1].itemId == ItemBase.lavaBucket.id) {
 				ModHelper.ModHelperFields.IS_LAVA_BUCKET_CONSUMED = true;
 			}			

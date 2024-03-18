@@ -24,7 +24,7 @@ public class LivingEntityRendererMixin {
 	
 	@Inject(method = "method_821", at = @At("HEAD"), cancellable = true)
 	public void finalBeta_method_821(Living entity, double d, double d1, double d2, CallbackInfo ci) {
-		if (Config.ConfigFields.DISABLE_ID_TAGS) {
+		if (Config.config.GRAPHICS_CONFIG.DISABLE_ID_TAGS) {
 			ci.cancel();
 		}
 	}

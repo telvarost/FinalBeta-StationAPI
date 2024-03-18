@@ -28,7 +28,7 @@ class SugarCaneMixin extends BlockBase {
             )
     )
     public int finalBeta_canPlaceAt(Level arg, int i, int j, int k) {
-        if (Config.ConfigFields.ALLOW_SUGAR_CANE_ON_SAND)
+        if (Config.config.ALLOW_SUGAR_CANE_ON_SAND)
         {
             int tileToPlaceAt = arg.getTileId(i, j, k);
 

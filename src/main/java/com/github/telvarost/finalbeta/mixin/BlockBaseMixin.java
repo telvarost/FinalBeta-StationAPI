@@ -16,7 +16,7 @@ public class BlockBaseMixin {
 
 	@Inject(method = "afterBreak", at = @At("HEAD"), cancellable = true)
 	public void finalBeta_afterBreakBlock(Level arg, PlayerBase arg2, int i, int j, int k, int l, CallbackInfo ci) {
-		if (Config.ScoreConfig.ADD_SCORE_ON_BLOCK_REMOVED) {
+		if (Config.config.SCORE_CONFIG.ADD_SCORE_ON_BLOCK_REMOVED) {
 			if (null != arg2) {
 				arg2.score++;
 			}
@@ -25,7 +25,7 @@ public class BlockBaseMixin {
 
 	@Inject(method = "afterPlaced", at = @At("HEAD"), cancellable = true)
 	public void finalBeta_afterPlaced(Level arg, int i, int j, int k, Living arg2, CallbackInfo ci) {
-		if (Config.ScoreConfig.ADD_SCORE_ON_BLOCK_PLACED) {
+		if (Config.config.SCORE_CONFIG.ADD_SCORE_ON_BLOCK_PLACED) {
 			if (null != arg2) {
 				if (arg2 instanceof PlayerBase) {
 					((PlayerBase) arg2).score++;

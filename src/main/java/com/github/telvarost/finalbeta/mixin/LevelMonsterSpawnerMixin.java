@@ -17,7 +17,7 @@ public class LevelMonsterSpawnerMixin {
 
     @Inject(method = "method_1869", at = @At("HEAD"), cancellable = true)
     private static void nightmaresHandler(Level level, List<PlayerBase> playersList, CallbackInfoReturnable<Boolean> cir) {
-        if (Config.ConfigFields.DISABLE_NIGHTMARES) {
+        if (Config.config.DISABLE_NIGHTMARES) {
             cir.setReturnValue(false);
         }
     }

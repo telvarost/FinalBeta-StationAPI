@@ -24,7 +24,7 @@ public class MinecartMixin {
 
 	@Inject(method = "getBoundingBox", at = @At("HEAD"), cancellable = true)
 	public void finalBeta_onCollision(EntityBase other, CallbackInfoReturnable<Box> ci) {
-		if (Config.ConfigFields.FIX_MINECART_STOPPING_ON_ITEMS) {
+		if (Config.config.FIX_MINECART_STOPPING_ON_ITEMS) {
 			if (other instanceof Item || other instanceof Arrow) {
 				ci.setReturnValue(null);
 			}
@@ -43,7 +43,7 @@ public class MinecartMixin {
 			float volume = 0;
 			float pitch = 0;
 			if (speed >= 0.01D) {
-				if (minecart.passenger != null && Config.GraphicsConfig.FIX_MINECART_FLICKERING) {
+				if (minecart.passenger != null && Config.config.GRAPHICS_CONFIG.FIX_MINECART_FLICKERING) {
 					minecart.boundingBox.method_99(minecart.boundingBox.minX - EXTRA_MINECART_XZ_SIZE, minecart.boundingBox.minY,
 							minecart.boundingBox.minZ - EXTRA_MINECART_XZ_SIZE, minecart.boundingBox.maxX + EXTRA_MINECART_XZ_SIZE,
 							minecart.boundingBox.maxY + EXTRA_MINECART_Y_SIZE, minecart.boundingBox.maxZ + EXTRA_MINECART_XZ_SIZE);
@@ -56,7 +56,7 @@ public class MinecartMixin {
 				pitch = 0.0f;
 			}
 
-			if (speed >= 0.01D && Config.ConfigFields.ADD_MINECART_SOUNDS) {
+			if (speed >= 0.01D && Config.config.ADD_MINECART_SOUNDS) {
 				if (minecart.field_1645 % 33 == 1) {
 					minecart.level.playSound(x, y, z, "minecart.base", volume, pitch);
 				}

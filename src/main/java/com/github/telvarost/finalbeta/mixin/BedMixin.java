@@ -15,7 +15,7 @@ public class BedMixin {
 
     @Inject(method = "canUse", at = @At("HEAD"), cancellable = true)
     public void finalBeta_canUse(Level level, int x, int y, int z, PlayerBase player, CallbackInfoReturnable<Boolean> cir) {
-        if (Config.ConfigFields.DISABLE_BEDS) {
+        if (Config.config.DISABLE_BEDS) {
             cir.setReturnValue(false);
         }
     }

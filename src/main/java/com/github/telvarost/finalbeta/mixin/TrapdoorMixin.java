@@ -26,7 +26,7 @@ public class TrapdoorMixin extends BlockBase {
             )
     )
     public boolean finalBeta_onAdjacentBlockUpdate(Level instance, int i, int j, int k) {
-        if (Config.ConfigFields.ALLOW_TRAPDOORS_WITHOUT_SUPPORTS) {
+        if (Config.config.ALLOW_TRAPDOORS_WITHOUT_SUPPORTS) {
             return true;
         } else {
             return instance.canSuffocate(i, j, k);
@@ -35,7 +35,7 @@ public class TrapdoorMixin extends BlockBase {
 
     @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable = true)
     public void finalBeta_canPlaceAt(Level arg, int i, int j, int k, int l, CallbackInfoReturnable<Boolean> cir) {
-        if (Config.ConfigFields.ALLOW_TRAPDOORS_WITHOUT_SUPPORTS) {
+        if (Config.config.ALLOW_TRAPDOORS_WITHOUT_SUPPORTS) {
             cir.setReturnValue(!arg.getMaterial(i, j, k).isSolid());
         }
     }

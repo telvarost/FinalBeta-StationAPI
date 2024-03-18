@@ -17,7 +17,7 @@ import net.minecraft.client.render.entity.model.Zombie;
 public class SkeletonModelMixin {
 	@Inject(method = "setAngles", at = @At("TAIL"))
 	public void finalBeta_setAngles(float f, float f1, float f2, float f3, float f4, float f5, CallbackInfo ci) {
-		if(Config.GraphicsConfig.FIX_BOW_MODEL) {
+		if(Config.config.GRAPHICS_CONFIG.FIX_BOW_MODEL) {
 			Biped model = ((Biped) (Object) this);
 			if(model instanceof Skeleton) {
 				model.field_623.yaw = 0.45f;

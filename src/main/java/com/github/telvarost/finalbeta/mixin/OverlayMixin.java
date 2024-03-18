@@ -37,7 +37,7 @@ public class OverlayMixin extends DrawableHelper {
 	)
 	public void finalBeta_render(TextRenderer instance, String string, int i, int j, int k)  {
 		if (instance != null) {
-			if (Config.ConfigFields.ADD_DAY_COUNTER) {
+			if (Config.config.GRAPHICS_CONFIG.ADD_DAY_COUNTER) {
 				instance.drawTextWithShadow(string, i, j, k);
 				long realDaysPlayed = Duration.ofSeconds(minecraft.statFileWriter.write(Stats.playOneMinute) / 20).toDays();
 				long gameDaysPlayed = Duration.ofSeconds(minecraft.statFileWriter.write(Stats.playOneMinute) / 20).toMinutes() / 20;

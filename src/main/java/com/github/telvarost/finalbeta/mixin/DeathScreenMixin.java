@@ -29,7 +29,7 @@ public class DeathScreenMixin extends ScreenBase {
 			)
 	)
 	private void finalBeta_renderDeathScreenText(Death instance, TextRenderer textRenderer, String s, int i, int j, int k) {
-		if (Config.GraphicsConfig.FIX_DEATH_SCREEN_TEXT) {
+		if (Config.config.GRAPHICS_CONFIG.FIX_DEATH_SCREEN_TEXT) {
 			int currentScore = 0;
 			PlayerBase player = PlayerHelper.getPlayerFromGame();
 

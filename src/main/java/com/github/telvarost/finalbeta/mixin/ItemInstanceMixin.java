@@ -3,8 +3,10 @@ package com.github.telvarost.finalbeta.mixin;
 import com.github.telvarost.finalbeta.Config;
 import java.util.Random;
 
+import net.minecraft.entity.player.PlayerBase;
+import net.modificationstation.stationapi.api.entity.player.PlayerHelper;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -14,23 +16,25 @@ import net.minecraft.item.ItemInstance;
 @Mixin(ItemInstance.class)
 public class ItemInstanceMixin {
 
-	private Random rand = new Random();
-	
-	@Shadow
-	private int damage;
+	@Unique
+	private static final Random random = new Random();
 
-	@Inject(method = "applyDamage", at = @At("HEAD"))
-	public void finalBeta_applyDamage(int i, EntityBase entityBase, CallbackInfo ci) {
+    @Inject(
+            method = "applyDamage",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/entity/player/PlayerBase;increaseStat(Lnet/minecraft/stat/Stat;I)V",
+                    shift = At.Shift.AFTER
+            )
+    )
+    public void finalBeta_applyDamage(int i, EntityBase entityBase, CallbackInfo ci) {
 		if(Config.config.ADD_ITEM_BREAK_SOUNDS) {
-			ItemInstance item = (ItemInstance) (Object) this;
+			PlayerBase player = PlayerHelper.getPlayerFromGame();
 
-			if (  (entityBase != null)
-			   && (item != null)
-			   && (this.damage + i > item.getDurability())
-			   )
+			if (null != player)
 			{
-				entityBase.level.playSound(entityBase, "random.break", 0.5f, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-			}		
+				player.level.playSound(player, "random.break", 0.5f, (random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F);
+			}
 		}
 	}
 }

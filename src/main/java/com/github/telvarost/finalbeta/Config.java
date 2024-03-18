@@ -1,10 +1,7 @@
 package com.github.telvarost.finalbeta;
 
 import blue.endless.jankson.Comment;
-import net.glasslauncher.mods.api.gcapi.api.ConfigCategory;
-import net.glasslauncher.mods.api.gcapi.api.ConfigName;
-import net.glasslauncher.mods.api.gcapi.api.GConfig;
-import net.glasslauncher.mods.api.gcapi.api.MultiplayerSynced;
+import net.glasslauncher.mods.api.gcapi.api.*;
 
 public class Config {
 
@@ -30,34 +27,42 @@ public class Config {
 
         @ConfigName("Allow placing pressure plates on fences")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean ALLOW_PRESSURE_PLATES_ON_FENCES = true;
 
         @ConfigName("Allow placing sugarcane on sand")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean ALLOW_SUGAR_CANE_ON_SAND = true;
 
         @ConfigName("Allow placing trapdoors without support")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean ALLOW_TRAPDOORS_WITHOUT_SUPPORTS = true;
 
         @ConfigName("Disable beds")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean DISABLE_BEDS = false;
 
         @ConfigName("Disable nightmares")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean DISABLE_NIGHTMARES = false;
 
         @ConfigName("Fix caught fish going above player head")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean FIX_FISHING = true;
 
         @ConfigName("Fix lava bucket being consumed in furnace")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean FIX_FURNACE_LAVA_BUCKET = true;
 
         @ConfigName("Fix minecart stopping on items")
         @MultiplayerSynced
+        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
 
         /** - At the current moment this is not toggle-able */

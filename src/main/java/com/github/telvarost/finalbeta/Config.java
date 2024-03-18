@@ -5,7 +5,7 @@ import net.glasslauncher.mods.api.gcapi.api.*;
 
 public class Config {
 
-    @GConfig(value = "config", visibleName = "FinalBeta Config")
+    @GConfig(value = "config", visibleName = "FinalBeta")
     public static ConfigFields config = new ConfigFields();
 
     public static class ConfigFields {

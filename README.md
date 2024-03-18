@@ -76,7 +76,7 @@ After:
 
 </details>
 
-<details><summary>Two different config options to handle how boats break (Fixed in AnnoyanceFix-StationAPI, although with less config)</summary>
+<details><summary>Two different config options to handle how boats break (Fixed in AnnoyanceFix-StationAPI)</summary>
 
 - Default config (value of 2) allows boats to break only when they crash with almost maximum speed. Making them less likely to break randomly.
 - A value of 1 disables boat breaking logic entirely.

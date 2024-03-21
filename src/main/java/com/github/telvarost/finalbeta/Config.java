@@ -13,9 +13,6 @@ public class Config {
         @ConfigCategory("Graphical Fixes")
         public GraphicsConfig GRAPHICS_CONFIG = new GraphicsConfig();
 
-        @ConfigCategory("Score Config")
-        public ScoreConfig SCORE_CONFIG = new ScoreConfig();
-
         @ConfigName("Add sound: Item Breaking")
         public Boolean ADD_ITEM_BREAK_SOUNDS = true;
 
@@ -25,20 +22,10 @@ public class Config {
         @ConfigName("Add sound: Open/Close Chest")
         public Boolean ADD_CHEST_SOUNDS = true;
 
-        @ConfigName("Allow placing pressure plates on fences")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
-        public Boolean ALLOW_PRESSURE_PLATES_ON_FENCES = true;
-
         @ConfigName("Allow placing sugarcane on sand")
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean ALLOW_SUGAR_CANE_ON_SAND = true;
-
-        @ConfigName("Allow placing trapdoors without support")
-        @MultiplayerSynced
-        @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
-        public Boolean ALLOW_TRAPDOORS_WITHOUT_SUPPORTS = true;
 
         @ConfigName("Disable beds")
         @MultiplayerSynced
@@ -64,11 +51,6 @@ public class Config {
         @MultiplayerSynced
         @ValueOnVanillaServer(booleanValue = TriBoolean.FALSE)
         public Boolean FIX_MINECART_STOPPING_ON_ITEMS = true;
-
-        /** - At the current moment this is not toggle-able */
-//        @ConfigName("Improved option/video menu controls")
-//        @Comment("Adds controls for clouds, fog, and FOV")
-//        public static Boolean IMPROVED_MENU_CONTROLS = true;
 
         @ConfigName("Use \"Shift + DROP_KEY\" to drop item stack")
         public Boolean STACK_DROP = false;
@@ -99,20 +81,5 @@ public class Config {
 
         @ConfigName("Fix minecart flickering")
         public Boolean FIX_MINECART_FLICKERING = true;
-    }
-
-    public static class ScoreConfig {
-
-        @ConfigName("Each block placed adds +1 to score")
-        public Boolean ADD_SCORE_ON_BLOCK_PLACED = true;
-
-        @ConfigName("Each block removed adds +1 to score")
-        public Boolean ADD_SCORE_ON_BLOCK_REMOVED = true;
-
-        @ConfigName("Each monster mob killed adds +1 to score")
-        public Boolean ADD_SCORE_ON_MONSTER_KILLED = true;
-
-        @ConfigName("Each passive mob killed adds +1 to score")
-        public Boolean ADD_SCORE_ON_PASSIVE_KILLED = true;
     }
 }

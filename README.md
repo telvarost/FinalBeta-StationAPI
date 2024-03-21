@@ -4,9 +4,9 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 **If you're looking for the Cursed Legacy edition:** https://modrinth.com/mod/final-beta
 
-**If you're looking for skin fixes and inventory fixes:** https://modrinth.com/mod/mojangfix/versions
-
-**If you're looking for vanilla Minecraft block/entity bug fixes:** https://modrinth.com/mod/annoyancefix-stationapi-edition
+**This mod is now deprecated in favor of the following two mods:**
+* ClientsideEssentials: https://github.com/telvarost/ClientsideEssentials-StationAPI
+* GameplayEssentials: https://github.com/telvarost/GameplayEssentials-StationAPI
 
 # Final Beta
 * Mod now works on Multiplayer with [GlassConfigAPI](https://modrinth.com/mod/glass-config-api) version 2.0+ used to sync configs!

@@ -33,7 +33,7 @@ class PressurePlateMixin extends BlockBase {
     )
     public boolean annoyanceFix_canPlaceAt(Level arg, int i, int j, int k) {
         if (Config.config.ALLOW_PRESSURE_PLATES_ON_FENCES) {
-            return true;
+            return arg.canSuffocate(i, j, k) || (BlockBase.FENCE.id == arg.getTileId(i, j, k));
         }
         else
         {
@@ -54,7 +54,7 @@ class PressurePlateMixin extends BlockBase {
 
             if (BlockBase.FENCE.id == blockBelowPressurePlateId)
             {
-                return true;
+                return instance.canSuffocate(i, j, k) || (BlockBase.FENCE.id == instance.getTileId(i, j, k));
             }
             else
             {

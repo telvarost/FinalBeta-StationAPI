@@ -3,7 +3,7 @@
 A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes and fixes some graphical issues.
 
 **If you're looking for the Cursed Legacy edition:** https://modrinth.com/mod/final-beta
-* This mod has been returned to its normal state to more closely match its origin cursed legacy counterpart.
+* This mod has been returned to its normal state to more closely resemble its cursed legacy counterpart.
 
 **This mod is now deprecated in favor of the following two mods:**
 * ClientsideEssentials: https://github.com/telvarost/ClientsideEssentials-StationAPI

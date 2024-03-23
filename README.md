@@ -3,6 +3,7 @@
 A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes and fixes some graphical issues.
 
 **If you're looking for the Cursed Legacy edition:** https://modrinth.com/mod/final-beta
+* This mod has been returned to its normal state to more closely match its origin cursed legacy counterpart.
 
 **This mod is now deprecated in favor of the following two mods:**
 * ClientsideEssentials: https://github.com/telvarost/ClientsideEssentials-StationAPI
@@ -15,15 +16,9 @@ A StationAPI mod for Minecraft Beta 1.7.3 that adds some quality of life changes
 
 The following features were added to the FinalBeta mod but were not a part of the original:
 
-* Extra menu controls for changing clouds, fog, and FOV.
 * Extra config options for enabling/disabling different parts of the mod.
-* Each block placed/removed adds +1 to score.
-* Each monster mob killed adds +1 to score.
-* Each passive mob killed adds +1 to score.
-* Allowing pressure plates to be place-able on fences.
-* Allowing trapdoors to be placed without having a supporting block.
 
-The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in the AnnoyanceFix mod:
+The following features were removed either because I failed to port them correctly and so disabled them or because they might conflict with the same or similar fix in a different mod:
 
 <details><summary>Updated list of blocks that pickaxes and axes can mine quicker (Fixed in AnnoyanceFix-StationAPI)</summary>
 

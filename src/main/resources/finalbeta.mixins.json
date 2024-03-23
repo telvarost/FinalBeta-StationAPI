@@ -5,36 +5,26 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BedMixin",
-    "BlockBaseMixin",
     "BowItemMixin",
     "FishHookMixin",
     "FurnaceEntityMixin",
     "LevelMonsterSpawnerMixin",
-    "LivingMixin",
     "MinecartMixin",
-    "PressurePlateMixin",
-    "SugarCaneMixin",
-    "TrapdoorMixin"
+    "SugarCaneMixin"
   ],
   "server": [
   ],
   "client": [
-    "options.GameOptionsMixin",
-    "options.OptionMixin",
-    "options.OptionsScreenMixin",
-    "options.VideoSettingsMixin",
     "AbstractClientPlayerMixin",
     "BipedRendererMixin",
     "ContainerScreenMixin",
     "DeathScreenMixin",
-    "GameRendererMixin",
     "ItemInstanceMixin",
     "LivingEntityRendererMixin",
     "MinecraftMixin",
     "OverlayMixin",
     "PlayerRendererMixin",
-    "SkeletonModelMixin",
-    "WorldRendererMixin"
+    "SkeletonModelMixin"
   ],
   "injectors": {
     "defaultRequire": 1

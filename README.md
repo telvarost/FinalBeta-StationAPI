@@ -121,7 +121,7 @@ As well as a few of other minor issues:
 
 ### Quality of Life changes
 
-<details><summary>Sugar canes can now be places on sand</summary>
+<details><summary>Sugar canes can now be placed on sand</summary>
 
 ![sugar cane on sand](https://i.imgur.com/N7WjSx8.png)
 
